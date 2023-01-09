@@ -47,7 +47,7 @@ def get_data_from_url(url) :
     the_dic = {
         'property_type' : bip_boup[0],
         'sale_type' : bip_boup[1],
-       'locality' : bip_boup[2],
+       'locality' : bip_boup[3],
        'bedroom' : bedroom,
        'size_of_house' : size_of_house,
     }
