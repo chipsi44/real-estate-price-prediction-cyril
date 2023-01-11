@@ -1,6 +1,6 @@
 
 from data_cleaning import pandas_data
-
+import pandas as pd
 df_object = pandas_data('test.csv')
 # How many rows and columns?
 def num_rows_cols(df) :
@@ -39,3 +39,4 @@ def less_influence_price(df) :
 #What is the percentage of missing values per column?
 def missing_values_percentage(df):
   return df.isnull().mean() * 100
+
