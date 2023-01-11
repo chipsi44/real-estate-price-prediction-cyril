@@ -1,6 +1,6 @@
 from data_cleaning import pandas_data
 import matplotlib.pyplot as plt
-
+import pandas as pd
 df_object = pandas_data('test.csv')
 my_df = df_object.pandas_data
 #plot the outliers
@@ -39,4 +39,50 @@ def DPS_histo(df) :
     # Show the histogram
     plt.show()
 
-DPS_histo(my_df)
+'''
+Wich are the 5 variables are the most important and why : 
+'locality','Price','Type_property','Number_bedrooms','Living_area'
+Because that's the variables where I have the more data. The more data you have the more accurate the analysis is right ? 
+What is the percentage of missing values per column? <- According to the answer of this question
+'''
+#What are the most expensive municipalities in belgium
+def most_exepensive(df) :
+    # Group the data by 'locality'
+    grouped_df = df.groupby(['locality'])
+
+    # Calculate the mean, median and price per square meter for each group and rename the column to prevent duplication
+    #Oke to be honnest this 3 lines, chat gpt helped me a lot 
+    mean_price = grouped_df.Price.mean().reset_index().rename(columns={'Price':'Mean Price'})
+    median_price = grouped_df.Price.median().reset_index().rename(columns={'Price':'Median Price'})
+    price_per_meter = pd.DataFrame(grouped_df.Price.sum()/grouped_df.Living_area.sum(),columns=['Price per square meter']).reset_index()
+    
+    # Concatenating the dataframes
+    result = pd.concat([mean_price, median_price, price_per_meter], axis=1)
+
+    # Sort the dataframe by the mean price in descending order
+    result.sort_values(by='Mean Price', ascending=False, inplace=True)
+
+    # Select the top municipalities
+    top_municipalities = result.head(10)
+    print(top_municipalities)
+
+#What are the most expensive municipalities in belgium
+def less_exepensive(df) :
+    # Group the data by 'locality'
+    grouped_df = df.groupby(['locality'])
+
+    # Calculate the mean, median and price per square meter for each group and rename the column to prevent duplication
+    #Oke to be honnest this 3 lines, chat gpt helped me a lot 
+    mean_price = grouped_df.Price.mean().reset_index().rename(columns={'Price':'Mean Price'})
+    median_price = grouped_df.Price.median().reset_index().rename(columns={'Price':'Median Price'})
+    price_per_meter = pd.DataFrame(grouped_df.Price.sum()/grouped_df.Living_area.sum(),columns=['Price per square meter']).reset_index()
+    
+    # Concatenating the dataframes
+    result = pd.concat([mean_price, median_price, price_per_meter], axis=1)
+
+    # Sort the dataframe by the mean price in descending order
+    result.sort_values(by='Mean Price', ascending=True, inplace=True)
+
+    # Select the top municipalities
+    top_municipalities = result.head(10)
+    print(top_municipalities)
