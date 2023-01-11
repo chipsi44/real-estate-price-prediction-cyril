@@ -39,4 +39,3 @@ def less_influence_price(df) :
 #What is the percentage of missing values per column?
 def missing_values_percentage(df):
   return df.isnull().mean() * 100
-print(missing_values_percentage(df_object.pandas_data))
