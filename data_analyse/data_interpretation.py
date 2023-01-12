@@ -1,8 +1,7 @@
 from data_cleaning import pandas_data
 import matplotlib.pyplot as plt
 import pandas as pd
-df_object = pandas_data('test.csv')
-my_df = df_object.pandas_data
+
 #plot the outliers
 def plot_outliers(df) :
     plt.figure(1)
@@ -86,3 +85,7 @@ def less_exepensive(df) :
     # Select the top municipalities
     top_municipalities = result.head(10)
     print(top_municipalities)
+df_object = pandas_data('data_cleaned.csv')
+df_data = df_object.pandas_data
+
+DPS_histo(df_data)
