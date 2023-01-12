@@ -1,7 +1,6 @@
-
 from data_cleaning import pandas_data
 import pandas as pd
-df_object = pandas_data('test.csv')
+
 # How many rows and columns?
 def num_rows_cols(df) :
     num_rows = len(df)

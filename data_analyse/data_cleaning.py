@@ -16,6 +16,7 @@ class pandas_data :
                 self.pandas_data.at[position,'Price'] = int(new_price)
     def get_dic_ref(self) :
         x = 0
+        #self.pandas_data = df -> dataframe in pandas
         for elem in self.pandas_data : 
             for position,data in enumerate(self.pandas_data[elem]) :
                 if data != 'None' and isinstance(data,str):
@@ -27,7 +28,5 @@ class pandas_data :
                             x += 1
                         self.pandas_data.at[position,elem] = self.dic_ref[data]
                        
-
-
 
 
