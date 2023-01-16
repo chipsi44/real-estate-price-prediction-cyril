@@ -1,20 +1,28 @@
 from data_cleaning import pandas_data
 import pandas as pd
 import matplotlib.pyplot as plt
+from data_analysis import missing_values_percentage
 
-df_object = pandas_data('data_cleaned.csv')
-df_data = df_object.pandas_data
+'''
+When you take all the data it says that what's influence the most the price is the fire place.
+It's because their is not enough data about the fire place. 
+I wanted to show it, and explain why it should be a great idea to force people to say if there is a fireplace into their houses.
+So it wanted to show how to improve immoweb ! 
+'''
+def missing_value(df_data) :
+    '''
+    df_data : pandas data frame 
+    '''
 
-def is_there_fireplace_here(df_data) :
-    # Count the number of houses with fireplaces
-    fireplace_count = df_data[df_data['fire_place'] == 1].shape[0]
-    #count the number of houses who said they don't have a fire place
-    no_info_fireplace_count = df_data[df_data['fire_place'] == 0].shape[0]
-    # Count the number of houses without fireplaces
-    no_fireplace_count = len(df_data) - fireplace_count
+    # Calculate the percentage of missing values for each column
+    missing_values = missing_values_percentage(df_data)
 
-    # Create the bar plot
-    plt.bar(['Fireplace', 'No Fireplace',"No info"], [fireplace_count, no_info_fireplace_count,no_fireplace_count])
-    plt.xlabel("FirePlace")
-    plt.ylabel("Number of Houses")
+    # Plot the results as a bar chart
+    missing_values.plot(kind='bar')
+
+    # Add labels and show the graph
+    plt.title("Missing value by percentage")
+    plt.xlabel('Columns')
+    plt.ylabel('Percentage of missing values')
     plt.show()
+

@@ -4,6 +4,10 @@ import pandas as pd
 
 #plot the outliers
 def plot_outliers(df) :
+    '''
+    df : pandas data frame
+    '''
+    #show the outliers based on the name of the columns given
     plt.figure(1)
     df[['Number_bedrooms']].boxplot()
 
@@ -21,6 +25,10 @@ it's better to have "normal" price and all.
 '''
 #represent the number of properties according to their surface using a histogram
 def DPS_histo(df) :
+    '''
+    df : pandas data frame
+    '''
+
     #Calculate first and third quartile
     q1, q3 = df['Living_area'].quantile([0.25, 0.75])
     #Calculate Interquartile range
@@ -46,6 +54,10 @@ What is the percentage of missing values per column? <- According to the answer 
 '''
 #What are the most expensive municipalities in belgium
 def most_exepensive(df) :
+    '''
+    df : pandas data frame
+    '''
+
     # Group the data by 'locality'
     grouped_df = df.groupby(['locality'])
 
@@ -67,6 +79,10 @@ def most_exepensive(df) :
 
 #What are the most expensive municipalities in belgium
 def less_exepensive(df) :
+    '''
+    df : pandas data frame
+    '''
+
     # Group the data by 'locality'
     grouped_df = df.groupby(['locality'])
 
@@ -85,7 +101,3 @@ def less_exepensive(df) :
     # Select the top municipalities
     top_municipalities = result.head(10)
     print(top_municipalities)
-df_object = pandas_data('data_cleaned.csv')
-df_data = df_object.pandas_data
-
-DPS_histo(df_data)
