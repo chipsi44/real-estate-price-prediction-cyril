@@ -36,4 +36,5 @@ class pandas_data :
                         self.pandas_data.at[position,elem] = self.dic_ref[data]
                        
 
-
+test = pandas_data('immo_data.csv')
+test.pandas_data.to_csv('data_cleaned.csv', index=False)

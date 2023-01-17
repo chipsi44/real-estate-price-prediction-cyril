@@ -25,4 +25,22 @@ def missing_value(df_data) :
     plt.xlabel('Columns')
     plt.ylabel('Percentage of missing values')
     plt.show()
+def terrace_property(df) :
+    # Select rows where the 'Terrace' column contains a value
+    terraced_properties = df[df["terrace"].notnull()]
+
+    # Count the types of properties with a terrace
+    property_counts = terraced_properties["Type_property"].value_counts()
+
+    # Print the results
+    print(property_counts)
+
+    # Create a bar chart of the property counts
+    property_counts.plot(kind='bar')
+
+    # Add a title
+    plt.title("Type of property with terrace")
+
+    # Show the chart
+    plt.show()
 
