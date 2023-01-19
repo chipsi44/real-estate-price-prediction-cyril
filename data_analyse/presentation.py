@@ -26,6 +26,9 @@ def missing_value(df_data) :
     plt.ylabel('Percentage of missing values')
     plt.show()
 def terrace_property(df) :
+    '''
+    df : pandas data frame
+    '''
     # Select rows where the 'Terrace' column contains a value
     terraced_properties = df[df["terrace"].notnull()]
 
