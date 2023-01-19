@@ -7,6 +7,7 @@ def plot_outliers(df) :
     '''
     df : pandas data frame
     '''
+
     #show the outliers based on the name of the columns given
     plt.figure(1)
     df[['Number_bedrooms']].boxplot()

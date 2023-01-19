@@ -1,16 +1,10 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
+import numpy as np
 
-pandas_data = pd.read_csv('data_cleaned.csv')
-#Hard coded it ! TO be faster
-dic_ref = {'apartment': 0, 'mixed-use-building': 1, 'house': 2, 'exceptional-property': 3, 'duplex': 4, 
-        'flat-studio': 5, 'villa': 6, 'country-cottage': 7, 'apartment-block': 8, 'chalet': 9, 'penthouse': 10, 'town-house': 11, 
-        'bungalow': 12, 'manor-house': 13, 'farmhouse': 14, 'castle': 15, 'ground-floor': 16, 'mansion': 17, 'other-property': 18, 
-        'triplex': 19, 'loft': 20, 'kot': 21, 'service-flat': 22, 'pavilion': 23, 'for-sale': 24,'Good': 25, 'To be done up': 26,
-         'To renovate': 27, 'As new': 28, 'To restore': 29, 'Just renovated': 30}
 
 '''
-No NANs -> already done
+
 No text data -> already done
 
 '''
@@ -19,20 +13,34 @@ def no_duplicates(pandas_data) :
     pandas_data = pandas_data.drop_duplicates()
     if pandas_data[pandas_data.duplicated()].empty : 
         print("Done ! No duplicates")
-
+    return pandas_data
+#No NANs
+def only_great_line(pandas_data) :
+    # list of desired columns
+    columns_to_keep = ['locality', 'Price', 'Type_property','Number_bedrooms', 'Living_area']
+    #drop all columns that are not in the list
+    df = pandas_data[columns_to_keep]
+    df = df.dropna()
+    return df 
 #Doesn't work, dunno why
+#No features that have too strong correlation between them
 def no_strong_corr(pandas_data) : 
-    #No features that have too strong correlation between them
-
     # Compute the correlation matrix
     corr_matrix = pandas_data.corr()
 
     # Get the absolute value of the correlation coefficients
     corr_matrix = corr_matrix.abs()
 
+    # Set the diagonal elements to nan
+    corr_matrix = corr_matrix.where(np.triu(np.ones(corr_matrix.shape)).astype(bool))
+    
+    # drop the diagonal elements
+    corr_matrix = corr_matrix.dropna()
+    print(corr_matrix)
     # Print the correlations that are greater than a certain threshold
     threshold = 0.8
-
+    
+    
     to_drop = []
 
     for col in corr_matrix.columns :
@@ -41,13 +49,14 @@ def no_strong_corr(pandas_data) :
     to_drop = to_drop[1:]
 
     pandas_data = pandas_data.drop(to_drop, axis=1)
+    return pandas_data
 
 #Use data normalization / scaling
 
 def normalize_scale(df) :
     # Extract the feature columns (all columns except the first one)
     X = df.iloc[:, 1:]
-
+    y = df.iloc[:, 0]
     # Create the StandardScaler object
     scaler = StandardScaler()
 
@@ -56,3 +65,11 @@ def normalize_scale(df) :
 
     # Transform the feature data using the scaler
     X_scaled = scaler.transform(X)
+    return X_scaled,y
+
+pandas_data = pd.read_csv('data_cleaned.csv')
+pandas_data = no_duplicates(pandas_data)
+pandas_data = only_great_line(pandas_data)
+pandas_data = no_strong_corr(pandas_data)
+
+print(pandas_data)

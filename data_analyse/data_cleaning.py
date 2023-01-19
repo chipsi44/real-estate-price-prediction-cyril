@@ -8,10 +8,10 @@ class pandas_data :
         self.file_name = file
         self.pandas_data = pd.read_csv(file)
         #Hard coded it ! TO be faster
-        self.dic_ref = {'apartment': 0, 'mixed-use-building': 1, 'house': 2, 'exceptional-property': 3, 'duplex': 4, 
-        'flat-studio': 5, 'villa': 6, 'country-cottage': 7, 'apartment-block': 8, 'chalet': 9, 'penthouse': 10, 'town-house': 11, 
-        'bungalow': 12, 'manor-house': 13, 'farmhouse': 14, 'castle': 15, 'ground-floor': 16, 'mansion': 17, 'other-property': 18, 
-        'triplex': 19, 'loft': 20, 'kot': 21, 'service-flat': 22, 'pavilion': 23, 'for-sale': 24,'Good': 25, 'To be done up': 26,
+        self.dic_ref = {'apartment': 0, 'mixed-use-building': 1, 'house': 2, 'exceptional-property': 3, 'duplex': 4, 'flat-studio': 5,
+         'villa': 6, 'country-cottage': 7, 'apartment-block': 8, 'chalet': 9, 'penthouse': 10, 'town-house': 11, 'bungalow': 12, 
+         'manor-house': 13, 'farmhouse': 14, 'castle': 15, 'ground-floor': 16, 'mansion': 17, 'other-property': 18, 'triplex': 19, 
+         'loft': 20, 'kot': 21, 'service-flat': 22, 'pavilion': 23, 'for-sale': 24, 'Good': 25, 'To be done up': 26, 
          'To renovate': 27, 'As new': 28, 'To restore': 29, 'Just renovated': 30}
         #Clean the data
         #self.clean_price()
@@ -41,6 +41,3 @@ class pandas_data :
                         self.pandas_data.at[position,elem] = self.dic_ref[data]
                        
 
-test = pandas_data('immo_data.csv')
-test.pandas_data.to_csv('data_cleaned.csv', index=False)
-print(test.dic_ref)
