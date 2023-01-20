@@ -11,7 +11,7 @@ Once I had the data set, I needed to understand it. So, I had to clean the data,
 Then, I had to predict prices on Belgium's real estate sales. So, I had to use machine learning. Here are the steps: select a model, train, test, and evaluate it using my dataset. In the "results," you will find the test and evaluation of different models.<br>
 This project uses **linear regression**,**neural network**,**decision_tree**,**lasso**,**elastic_net**, and **ridge** models<br>
 
-If you want to find the data set (immo_data.csv), the cleaned data (data_cleaned.csv) or the .png for the graph you can go in the **data_modeling branch**.
+If you want to find the data set link.csv or immo_data.csv, the cleaned data (data_cleaned.csv) or the .png for the graph you can go in the **data_modeling branch**.
 ## results : 
 ### Presentation : 
 <table>
