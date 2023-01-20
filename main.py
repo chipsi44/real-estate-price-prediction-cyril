@@ -30,15 +30,15 @@ def main() :
         tt.join()
     '''
     # CREATE DATA_CLEANED.CSV take : 30SEC
-    '''
-    cleaned_csv = pandas_data("immo_data.csv")
-    cleaned_csv.pandas_data.to_csv("data_cleaned.csv")
+    
+    '''cleaned_csv = pandas_data("immo_data.csv")
+    cleaned_csv.pandas_data.to_csv("data_cleaned.csv", index=False)
     '''
     #Get results for different model
     pandas_data = pd.read_csv('data_cleaned.csv')
     pandas_data = no_duplicates(pandas_data)
     pandas_data = only_great_line(pandas_data)
-    pandas_data =  no_strong_corr(pandas_data)
+    pandas_data = no_strong_corr(pandas_data)
     test_multiple_model(pandas_data)
 
 if __name__ == '__main__' :
