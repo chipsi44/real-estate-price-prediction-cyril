@@ -8,9 +8,26 @@ Real-Estate-Price-Prediction:
 
         But the first question is wich fields should be mandatory to fill if we want to have a better data set
         and better view of how to sell the house
+    
+    results : 
+        started the linear_regression model    
+        Mean Squared Error:  8847171.593386266 
+        Mean Absolute Error:  2643.302809255087
+                
+        started the logistic model
+        Train score:  0.03636597275764585
+        Test score:  0.035670230263157895
+
+        started the random_forest model
+        Train score:  0.8721151374967875
+        Test score:  0.15758634868421054
+
+        started the nn model
+        Mean Squared Error:  8064819.722794194
+        Mean Absolute Error:  2443.128342451968
 
     Installation:
-        Install pandas, matplotlib
+        Install pandas, matplotlib, bs4, scikit-learn, numpy
 
     Usage:
         The data recolted are not used for any commercial activities.
@@ -24,10 +41,5 @@ Real-Estate-Price-Prediction:
         Cyril Verwimp
 
     Timeline:
-        I had 7 days to do it ! 
-
-        Day 1 : Data cleaning and modification of the data Set
-        Day 2 : Problems with the computer
-        day 3 : Data interpretation
-        Day 4 : End of the project
+        
 
