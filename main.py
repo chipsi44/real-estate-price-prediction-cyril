@@ -30,8 +30,8 @@ def main() :
         tt.join()
     '''
     # CREATE DATA_CLEANED.CSV take : 30SEC
-    
-    '''cleaned_csv = pandas_data("immo_data.csv")
+    '''
+    cleaned_csv = pandas_data("immo_data.csv")
     cleaned_csv.pandas_data.to_csv("data_cleaned.csv", index=False)
     '''
     #Get results for different model
