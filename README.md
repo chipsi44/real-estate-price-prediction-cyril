@@ -14,8 +14,16 @@ This project uses **linear regression**,**neural network**,**decision_tree**,**l
 If you want to find the data set (immo_data.csv), the cleaned data (data_cleaned.csv) or the .png for the graph you can go in the **data_modeling branch**.
 ## results : 
 ### Presentation : 
-![First figure](https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_1.png)
-![Second figure](https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_2.png)
+<table>
+  <tr>
+    <td>
+        <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_1.png" width="400" height="200">
+    </td>
+    <td>
+        <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_2.png" width="400" height="200">
+    </td>
+  </tr>
+</table>
 (I need to remade the graphs I know ! I'll do it later )
 ### Model results
 **linear_regression model** <br>
@@ -65,9 +73,9 @@ Ibrahim Mettioui <br>
 **Second and third week (Data analyse + data modeling ) :** <br>
 Cyril Verwimp
 ## Timeline:
-first week (5 days): **Data acquisition** <br>
+first week (5 days) : **Data acquisition** <br>
 
-Second week (7 days): **Data analyse** <br>
+Second week (7 days) : **Data analyse** <br>
 
 Third week (6 days) : **Data modeling** <br>
 
