@@ -1,4 +1,4 @@
-from data_cleaning_modeling import normalize_scale
+from data_modeling.data_cleaning_modeling import normalize_scale
 from sklearn.model_selection import train_test_split
 
 def training_testing_sets(pandas_data) :

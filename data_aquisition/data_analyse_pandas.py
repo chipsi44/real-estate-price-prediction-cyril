@@ -1,10 +1,13 @@
+from bs4 import BeautifulSoup
+from data_aquisition.data_cleaning import reference_dic_needed, clean_escape_characters
+from threading import RLock
 import requests
 import re
 import pandas as pd
 import random
 import csv
-from bs4 import BeautifulSoup
-from data_cleaning import reference_dic_needed, clean_escape_characters
+import threading
+import time
 
 def remove_html_tags(s):
     new_s = re.sub('\s+', ' ', s)
@@ -91,7 +94,7 @@ def data_to_pandas(data_dic,data_frame) :
     
     return data_frame
 
-    def data_to_csv(pass_row) :
+def data_to_csv(pass_row) :
         count = 0
         ploted_frame = {}
         random_num = random.randint(0,50000)

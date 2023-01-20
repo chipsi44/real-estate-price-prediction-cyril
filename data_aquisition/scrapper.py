@@ -1,4 +1,4 @@
-from scrapper_thread import link_scrapper
+from data_aquisition.scrapper_thread import link_scrapper
 from threading import Thread
 from threading import RLock
 from webdriver_manager.firefox import GeckoDriverManager

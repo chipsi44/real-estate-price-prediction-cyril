@@ -1,7 +1,6 @@
-from data_cleaning_modeling import no_duplicates, only_great_line, no_strong_corr
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score,mean_squared_error, mean_absolute_error
-from data_formatting import training_testing_sets
+from data_modeling.data_formatting import training_testing_sets
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.neural_network import MLPRegressor
@@ -43,8 +42,3 @@ def test_multiple_model(pandas_data) :
         model_training(model,X_train, X_test, y_train, y_test)
 
 
-pandas_data = pd.read_csv('data_cleaned.csv')
-pandas_data = no_duplicates(pandas_data)
-pandas_data = only_great_line(pandas_data)
-pandas_data =  no_strong_corr(pandas_data)
-test_multiple_model(pandas_data)
