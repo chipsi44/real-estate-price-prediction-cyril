@@ -1,7 +1,10 @@
 import requests
 import re
 import pandas as pd
+import random
+import csv
 from bs4 import BeautifulSoup
+from data_cleaning import reference_dic_needed, clean_escape_characters
 
 def remove_html_tags(s):
     new_s = re.sub('\s+', ' ', s)
@@ -87,3 +90,35 @@ def data_to_pandas(data_dic,data_frame) :
             data_frame[key].append(value)
     
     return data_frame
+
+    def data_to_csv(pass_row) :
+        count = 0
+        ploted_frame = {}
+        random_num = random.randint(0,50000)
+        if random_num == random.randint(0,50000) : 
+            time.sleep(0.1)
+        with open('links.csv', 'r') as links_file : 
+            reader = csv.reader(links_file)
+            #Skip the line already in use by other threads
+            for i in range(pass_row) :
+                next(reader)
+            for row in reader :
+                the_data = get_data_from_url(row[0])
+                if the_data == 'empty' :
+                    pass
+                else : 
+                    ploted_frame = data_to_pandas(the_data,ploted_frame)
+                    count += 1
+                    print(f"I'm at {count + pass_row} page done")
+                if count == 50 : 
+                    break
+                    
+        for key in ploted_frame:
+            ploted_frame[key] = [clean_escape_characters(value) for value in ploted_frame[key]]
+        ploted_frame = reference_dic_needed(ploted_frame)
+
+        df = pd.DataFrame(ploted_frame)
+        
+        with lock :
+            with open('immo_data.csv','a') as data_file : 
+                df.to_csv(data_file, mode='a', header=False, index=False)

@@ -1,4 +1,3 @@
-import pandas as pd
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
@@ -22,7 +21,7 @@ def only_great_line(pandas_data) :
     df = pandas_data[columns_to_keep]
     df = df.dropna()
     return df 
-#Doesn't work, dunno why
+
 #No features that have too strong correlation between them
 def no_strong_corr(pandas_data) : 
     # Compute the correlation matrix
@@ -36,7 +35,7 @@ def no_strong_corr(pandas_data) :
     
     # drop the diagonal elements
     corr_matrix = corr_matrix.dropna()
-    print(corr_matrix)
+
     # Print the correlations that are greater than a certain threshold
     threshold = 0.8
     
@@ -66,10 +65,3 @@ def normalize_scale(df) :
     # Transform the feature data using the scaler
     X_scaled = scaler.transform(X)
     return X_scaled,y
-
-pandas_data = pd.read_csv('data_cleaned.csv')
-pandas_data = no_duplicates(pandas_data)
-pandas_data = only_great_line(pandas_data)
-pandas_data = no_strong_corr(pandas_data)
-
-print(pandas_data)

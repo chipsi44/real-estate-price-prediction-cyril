@@ -14,11 +14,11 @@ class pandas_data :
          'loft': 20, 'kot': 21, 'service-flat': 22, 'pavilion': 23, 'for-sale': 24, 'Good': 25, 'To be done up': 26, 
          'To renovate': 27, 'As new': 28, 'To restore': 29, 'Just renovated': 30}
         #Clean the data
-        #self.clean_price()
+        self.clean_price()
         #Create a reference dictionnary
-        #self.get_dic_ref()
+        self.get_dic_ref()
         #replace all the none by empty value
-        #self.pandas_data = self.pandas_data.replace('None', pd.NA )
+        self.pandas_data = self.pandas_data.replace('None', pd.NA )
     def clean_price(self) : 
         #Cleaning all the prices that are wrong (Some prices where duplicated) house for 300K was listed as 300 000 300 000
         for position,price in enumerate(self.pandas_data['Price']) :
@@ -40,4 +40,3 @@ class pandas_data :
                             x += 1
                         self.pandas_data.at[position,elem] = self.dic_ref[data]
                        
-
