@@ -24,7 +24,7 @@ If you want to find the data set (immo_data.csv), the cleaned data (data_cleaned
     </td>
   </tr>
 </table>
-(I need to remade the graphs I know ! I'll do it later )
+(I need to remake the graphs, I know! I'll do it later.)
 
 ### Model results
 **linear_regression model** <br>
@@ -54,7 +54,7 @@ Mean Absolute Error:  2432.6872378055973<br>
 Seems pretty clear that taking the **Neural network** model is the more optimize
 ## Installation:
 
-Install pandas, matplotlib, bs4, scikit-learn, numpy <br>
+pip install -r requirements.txt <br>
 Requirements.txt file is available !
 ## Usage:
 
