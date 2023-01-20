@@ -1,8 +1,7 @@
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score,mean_squared_error, mean_absolute_error
+from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
+from sklearn.tree import DecisionTreeRegressor
 from data_modeling.data_formatting import training_testing_sets
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import SVC
 from sklearn.neural_network import MLPRegressor
 from sklearn.linear_model import LinearRegression
 import pandas as pd
@@ -13,28 +12,23 @@ def model_training(model,X_train, X_test, y_train, y_test) :
 
     # Predict on the testing data
     y_pred = model.predict(X_test)
-
-    # Calculate the train test score
-    train_score = model.score(X_train, y_train)
-    if isinstance(model, (LinearRegression, MLPRegressor)):
-        mse = mean_squared_error(y_test, y_pred)
-        mae = mean_absolute_error(y_test, y_pred)
-        print("Mean Squared Error: ", mse)
-        print("Mean Absolute Error: ", mae)
-    else : 
-        test_score = accuracy_score(y_test, y_pred)
-        print("Train score: ", train_score)
-        print("Test score: ", test_score)
+    
+    mse = mean_squared_error(y_test, y_pred)
+    mae = mean_absolute_error(y_test, y_pred)
+    print("Mean Squared Error: ", mse)
+    print("Mean Absolute Error: ", mae)
+    
 def test_multiple_model(pandas_data) :    
     # Initialize the model
     
     X_train, X_test, y_train, y_test = training_testing_sets(pandas_data)
     dic_model = {
         "linear_regression": lambda : LinearRegression(),
-        "logistic" : lambda : LogisticRegression(),
-        "random_forest": lambda : RandomForestClassifier(),
-        #"svm": lambda : SVC(),
-        "nn" : lambda : MLPRegressor(hidden_layer_sizes=(100, 100, 100), max_iter=2500)
+        "nn" : lambda : MLPRegressor(hidden_layer_sizes=(100, 100, 100), max_iter=2500),
+        "ridge": lambda : Ridge(),
+        "elastic_net": lambda : ElasticNet(),
+        "lasso": lambda : Lasso(),
+        "decision_tree": lambda : DecisionTreeRegressor()
     }
     for key, value in dic_model.items() : 
         model = value()

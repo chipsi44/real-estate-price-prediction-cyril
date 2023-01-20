@@ -53,7 +53,9 @@ Ibrahim Mettioui <br>
 **Second and third week (Data analyse + data modeling ) :** <br>
 Cyril Verwimp
 ## Timeline:
-first week : Data acquisition <br>
-Second week : Data analyse <br>
-Third week : Data modeling <br>
+first week (5 days): **Data acquisition** <br>
+
+Second week (7 days): **Data analyse** <br>
+
+Third week (6 days) : **Data modeling** <br>
 
