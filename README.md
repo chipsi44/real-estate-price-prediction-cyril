@@ -39,7 +39,7 @@ Mean Absolute Error:  2423.54099132909<br>
 Mean Squared Error:  8847171.700932445<br>
 Mean Absolute Error:  2643.3036503188905<br>
 
-**elastic_net model**
+**elastic_net model**<br>
 Mean Squared Error:  8862750.543392384<br>
 Mean Absolute Error:  2653.112158454532<br>
 
