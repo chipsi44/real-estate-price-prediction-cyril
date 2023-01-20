@@ -13,19 +13,19 @@ and better view of how to sell the house.
 This project uses **linear regression**, **logistic**, **random forest**, and **neural network** models     
 ## results : 
 
-**started the linear_regression model**    
+**linear_regression model:**    
     Mean Squared Error:  8847171.593386266 
     Mean Absolute Error:  2643.302809255087
                 
-**started the logistic model**
+**logistic model:**
     Train score:  0.03636597275764585
     Test score:  0.035670230263157895
 
-**started the random_forest model**
+**random_forest model :**
     Train score:  0.8721151374967875
     Test score:  0.15758634868421054
 
-**started the nn model**
+**nn model :**
     Mean Squared Error:  8064819.722794194
     Mean Absolute Error:  2443.128342451968
 
