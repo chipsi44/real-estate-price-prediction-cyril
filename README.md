@@ -14,27 +14,34 @@ This project uses **linear regression**,**neural network**,**decision_tree**,**l
 If you want to find the data set (immo_data.csv), the cleaned data (data_cleaned.csv) or the .png for the graph you can go in the **data_modeling branch**.
 ## results : 
 ### Presentation : 
-![First models ](https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_1.png)
+![First figure](https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_1.png)
+![Second figure](https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_2.png)
 ### Model results
 **linear_regression model** <br>
 Mean Squared Error:  8847171.593386266<br>
 Mean Absolute Error:  2643.302809255087<br>
+
 **Neural network model** <br>
 Mean Squared Error:  8033030.594039319<br>
 Mean Absolute Error:  2423.54099132909<br>
+
 **ridge model**<br>
 Mean Squared Error:  8847171.700932445<br>
 Mean Absolute Error:  2643.3036503188905<br>
+
 **elastic_net model**
 Mean Squared Error:  8862750.543392384<br>
 Mean Absolute Error:  2653.112158454532<br>
+
 **lasso model**<br>
 Mean Squared Error:  8847178.330258686 <br>
 Mean Absolute Error:  2643.4207911561834<br>
+
 **decision_tree model**<br>
 Mean Squared Error:  12167048.02336584<br>
 Mean Absolute Error:  2432.6872378055973<br>
 
+Seems pretty clear that taking the **Neural network** model is the more optimize
 ## Installation:
 
 Install pandas, matplotlib, bs4, scikit-learn, numpy <br>
