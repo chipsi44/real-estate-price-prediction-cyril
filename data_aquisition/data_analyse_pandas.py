@@ -1,7 +1,13 @@
+from bs4 import BeautifulSoup
+from data_aquisition.data_cleaning import reference_dic_needed, clean_escape_characters
+from threading import RLock
 import requests
 import re
 import pandas as pd
-from bs4 import BeautifulSoup
+import random
+import csv
+import threading
+import time
 
 def remove_html_tags(s):
     new_s = re.sub('\s+', ' ', s)
@@ -47,7 +53,7 @@ def get_data_from_url(url) :
     the_dic = {
         'property_type' : bip_boup[0],
         'sale_type' : bip_boup[1],
-       'locality' : bip_boup[2],
+       'locality' : bip_boup[3],
        'bedroom' : bedroom,
        'size_of_house' : size_of_house,
     }
@@ -87,3 +93,35 @@ def data_to_pandas(data_dic,data_frame) :
             data_frame[key].append(value)
     
     return data_frame
+
+def data_to_csv(pass_row) :
+        count = 0
+        ploted_frame = {}
+        random_num = random.randint(0,50000)
+        if random_num == random.randint(0,50000) : 
+            time.sleep(0.1)
+        with open('links.csv', 'r') as links_file : 
+            reader = csv.reader(links_file)
+            #Skip the line already in use by other threads
+            for i in range(pass_row) :
+                next(reader)
+            for row in reader :
+                the_data = get_data_from_url(row[0])
+                if the_data == 'empty' :
+                    pass
+                else : 
+                    ploted_frame = data_to_pandas(the_data,ploted_frame)
+                    count += 1
+                    print(f"I'm at {count + pass_row} page done")
+                if count == 50 : 
+                    break
+                    
+        for key in ploted_frame:
+            ploted_frame[key] = [clean_escape_characters(value) for value in ploted_frame[key]]
+        ploted_frame = reference_dic_needed(ploted_frame)
+
+        df = pd.DataFrame(ploted_frame)
+        
+        with lock :
+            with open('immo_data.csv','a') as data_file : 
+                df.to_csv(data_file, mode='a', header=False, index=False)
