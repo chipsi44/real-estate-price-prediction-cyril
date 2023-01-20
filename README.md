@@ -28,30 +28,31 @@ If you want to find the data set link.csv or immo_data.csv, the cleaned data (da
 
 ### Model results
 **linear_regression model** <br>
-Mean Squared Error:  8847171.593386266<br>
-Mean Absolute Error:  2643.302809255087<br>
-
-**Neural network model** <br>
-Mean Squared Error:  8033030.594039319<br>
-Mean Absolute Error:  2423.54099132909<br>
+Test score: -6.09 <br>
+Test MAE: 193230.63 <br>
+Test MSE: 1548087208187.92 <br>
 
 **ridge model**<br>
-Mean Squared Error:  8847171.700932445<br>
-Mean Absolute Error:  2643.3036503188905<br>
+Test score: -6.07 <br>
+Test MAE: 193210.83 <br>
+Test MSE: 1544861136180.71 <br>
 
 **elastic_net model**<br>
-Mean Squared Error:  8862750.543392384<br>
-Mean Absolute Error:  2653.112158454532<br>
+Test score: 0.23   <br>
+Test MAE: 192366.58 <br>
+Test MSE: 167438793285.93 <br>
 
 **lasso model**<br>
-Mean Squared Error:  8847178.330258686 <br>
-Mean Absolute Error:  2643.4207911561834<br>
+Test score: -6.08 <br>
+Test MAE: 193229.37 <br>
+Test MSE: 1547891047219.70 <br>
 
 **decision_tree model**<br>
-Mean Squared Error:  12167048.02336584<br>
-Mean Absolute Error:  2432.6872378055973<br>
+Test score: 0.42 <br>
+Test MAE: 145703.60 <br>
+Test MSE: 126690476526.32 <br>
 
-Seems pretty clear that taking the **Neural network** model is the more optimize
+Those are pretty bad results trying to figure out why
 ## Installation:
 
 pip install -r requirements.txt <br>
