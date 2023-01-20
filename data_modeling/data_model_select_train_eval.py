@@ -7,28 +7,34 @@ from sklearn.linear_model import LinearRegression
 import pandas as pd
 
 def model_training(model,X_train, X_test, y_train, y_test) : 
-    # Fit the model on the training data
+   # fit the model to the training data
     model.fit(X_train, y_train)
 
-    # Predict on the testing data
+    # evaluate the model on the test data
+    score = model.score(X_test, y_test)
+    print(f'Test score: {score:.2f}')
+    
+    # make predictions
     y_pred = model.predict(X_test)
     
-    mse = mean_squared_error(y_test, y_pred)
+    # calculate MAE and MSE
     mae = mean_absolute_error(y_test, y_pred)
-    print("Mean Squared Error: ", mse)
-    print("Mean Absolute Error: ", mae)
+    mse = mean_squared_error(y_test, y_pred)
     
+    # print the results
+    print(f'Test Mean Absolute Error: {mae:.2f}')
+    print(f'Test Mean Squared Error: {mse:.2f}')
 def test_multiple_model(pandas_data) :    
     # Initialize the model
     
     X_train, X_test, y_train, y_test = training_testing_sets(pandas_data)
     dic_model = {
         "linear_regression": lambda : LinearRegression(),
-        "nn" : lambda : MLPRegressor(hidden_layer_sizes=(100, 100, 100), max_iter=2500),
         "ridge": lambda : Ridge(),
         "elastic_net": lambda : ElasticNet(),
         "lasso": lambda : Lasso(),
-        "decision_tree": lambda : DecisionTreeRegressor()
+        "decision_tree": lambda : DecisionTreeRegressor(),
+        "nn" : lambda : MLPRegressor(hidden_layer_sizes=(100, 100, 100), max_iter=2500)
     }
     for key, value in dic_model.items() : 
         model = value()

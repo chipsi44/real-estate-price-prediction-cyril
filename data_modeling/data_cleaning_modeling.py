@@ -53,9 +53,10 @@ def no_strong_corr(pandas_data) :
 #Use data normalization / scaling
 
 def normalize_scale(df) :
-    # Extract the feature columns (all columns except the first one)
-    X = df.iloc[:, 1:]
-    y = df.iloc[:, 0]
+    # Extract all columns except the second one (Price) and assign it to the variable X, and the second column (Price) is assigned to the variable y.
+    X = df.drop('Price',axis=1)
+    y = df["Price"]
+
     # Create the StandardScaler object
     scaler = StandardScaler()
 
@@ -64,4 +65,5 @@ def normalize_scale(df) :
 
     # Transform the feature data using the scaler
     X_scaled = scaler.transform(X)
+
     return X_scaled,y
