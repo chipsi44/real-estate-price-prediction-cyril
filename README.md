@@ -25,6 +25,7 @@ If you want to find the data set (immo_data.csv), the cleaned data (data_cleaned
   </tr>
 </table>
 (I need to remade the graphs I know ! I'll do it later )
+
 ### Model results
 **linear_regression model** <br>
 Mean Squared Error:  8847171.593386266<br>
