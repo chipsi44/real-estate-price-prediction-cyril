@@ -16,7 +16,7 @@ def no_duplicates(pandas_data) :
 #No NANs
 def only_great_line(pandas_data) :
     # list of desired columns
-    columns_to_keep = ['locality', 'Price', 'Type_property','Number_bedrooms', 'Living_area']
+    columns_to_keep = ['locality', 'Price','Number_bedrooms', 'Living_area']
     #drop all columns that are not in the list
     df = pandas_data[columns_to_keep]
     df = df.dropna()
