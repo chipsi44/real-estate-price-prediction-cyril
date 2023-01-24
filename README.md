@@ -6,7 +6,15 @@ This is a project about price prediction on the website Immoweb with help of AI.
 
 It's going to be in 4 steps : Scrapping, to get the data from Immoweb -> Data analyse, to understand the data set -> data modeling, to get the best model -> Deployement, heu I'll know later
 
-#### In the first part, I obtained the data by scraping them from Immoweb.<br>
+#### Scrapping part<br>
+
+In the project, the folder named "data_acquisition" contains all the Python scripts related to the scraping process. Scraping refers to the process of extracting data from websites or other sources. The scripts in the data_acquisition folder are used to collect and process the data needed for the project.<br>
+
+You'll find differents python file : <br>
+- Scrapper.py is used to get all the link of properties in immoweb
+- scrapper_thread.py is used to get all the links of properties in immoweb but faster because of the threads
+- data_analyse_pandas.py is used to scrap the info from a immoweb page, we are going to extract all the info related to a properties. Once it's done, we are going to convert those data into a pandas data frame and then we are going to put them in a CSV. The data we are collecting are :'locality','Price','Type_property' ,'Sale_type','number_bedrooms' ,'Living_area','fully_equipped_kitchen','Furnished','terrace','garden','surface_land','surface_area_plot','facades_number','Swimming_pool','building_state' ,'fire_place'
+- data_refactoring.py
 
 Once I had the data set, I needed to understand it. So, I had to clean the data, ask some questions to my dataset, and then make interpretations. More information can be found in the "data_analyze" folder. In this folder, you will find the "presentation.py" file, where you can find the code to create the two graphs presented in the "results." <br>
 

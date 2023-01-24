@@ -95,6 +95,7 @@ def data_to_pandas(data_dic,data_frame) :
     return data_frame
 
 def data_to_csv(pass_row) :
+        lock = RLock
         count = 0
         ploted_frame = {}
         random_num = random.randint(0,50000)
