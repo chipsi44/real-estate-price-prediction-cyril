@@ -4,10 +4,12 @@ import matplotlib.pyplot as plt
 from data_analysis import missing_values_percentage
 
 '''
-When you take all the data it says that what's influence the most the price is the fire place.
-It's because their is not enough data about the fire place. 
-I wanted to show it, and explain why it should be a great idea to force people to say if there is a fireplace into their houses.
-So it wanted to show how to improve immoweb ! 
+The data suggests that the presence of a fire place has the most significant impact on the price of a property. 
+However, it may be due to a lack of data on the topic. To improve the accuracy and completeness of the data, 
+it would be beneficial to make it mandatory for property owners or real estate agents to provide information about the presence
+of a fire place when listing a property. This would also be beneficial for potential buyers as it would help them make better
+decisions based on the features they are looking for. The two graphs presented in the analysis aim to demonstrate the importance
+of collecting data about the presence of a fire place and the potential benefits of implementing this requirement on the platform.
 '''
 def missing_value(df_data) :
     '''
