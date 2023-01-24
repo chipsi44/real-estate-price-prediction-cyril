@@ -34,7 +34,7 @@ def test_multiple_model(pandas_data) :
         "elastic_net": lambda : ElasticNet(),
         "lasso": lambda : Lasso(),
         "decision_tree": lambda : DecisionTreeRegressor(),
-        "nn" : lambda : MLPRegressor(hidden_layer_sizes=(100, 100, 100), max_iter=2500)
+        #"nn" : lambda : MLPRegressor(hidden_layer_sizes=(100, 100, 100), max_iter=2500)
     }
     for key, value in dic_model.items() : 
         model = value()
