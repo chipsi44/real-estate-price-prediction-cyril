@@ -27,8 +27,13 @@ You'll find differents python file : <br>
 
 #### data modeling<br>
 
-Then, I had to predict prices on Belgium's real estate sales. So, I had to use machine learning. Here are the steps: select a model, train, test, and evaluate it using my dataset. In the "results," you will find the test and evaluation of different models.<br>
-This project uses **linear regression**,**neural network**,**decision_tree**,**lasso**,**elastic_net**, and **ridge** models<br>
+After understanding the data set, the next step is to predict prices on Belgium's real estate sales using machine learning. The process typically involves the following steps:
+
+- Selecting a model, such as linear regression, decision tree, lasso, elastic net, or ridge, that best fits the data set.
+- Training the model on the data set.
+- Testing the model using a separate set of data, called the test set, to evaluate its performance.
+- Evaluating the model using metrics such as mean squared error, mean absolute error, and score. <br>
+The "results" section of the project contains the testing and evaluation of different models, showing the performance of each one. It is important to keep in mind that the choice of model and the parameters used may have an effect on the performance of the prediction. Therefore, it is important to compare the performance of different models and choose the one that performs the best.
 
 If you want to find the data set link.csv or immo_data.csv, the cleaned data (data_cleaned.csv) or the .png for the graph you can go in the **data_modeling branch**.
 ## results : 
