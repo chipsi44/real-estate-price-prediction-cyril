@@ -142,7 +142,9 @@ pandas_data = pd.read_csv('data_cleaned.csv')
 
 pandas_data = only_great_line(pandas_data)
 pandas_data = no_strong_corr(pandas_data)
+pandas_data = pandas_data[pandas_data.Price < 1000000]
 pandas_data = ZipCode_AveragePrice(pandas_data)
 pandas_data = drop_outliers(pandas_data)
+
 print(pandas_data)
 test_multiple_model(pandas_data)
