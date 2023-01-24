@@ -90,7 +90,7 @@ Test score: 0.42 <br>
 Test MAE: 145703.60 <br>
 Test MSE: 126690476526.32 <br>
 
-Those are pretty bad results trying to figure out why
+Overall, the model results indicate that models are not performing well on the test data, with high test score, MAE and MSE. This suggests that the models may need further tuning or that a different approach may be needed to improve the predictions.
 ## Installation:
 
 pip install -r requirements.txt <br>
