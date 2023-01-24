@@ -69,18 +69,22 @@ The data suggests that the presence of a fire place has the most significant imp
 Test score: 0.47 <br>
 Test Mean Absolute Error: 153337.81 <br>
 Test Mean Squared Error: 122533131412.60 <br>
+
 **ridge model**<br>
 Test score: 0.47 <br>
 Test Mean Absolute Error: 153337.72 <br>
 Test Mean Squared Error: 122533971250.41 <br>
+
 **elastic_net model** <br>
 Test score: 0.39 <br>
 Test Mean Absolute Error: 162118.78<br>
 Test Mean Squared Error: 140711123397.07<br>
+
 **lasso model**<br>
 Test score: 0.47<br>
 Test Mean Absolute Error: 153337.82<br>
 Test Mean Squared Error: 122533327518.79<br>
+
 **decision_tree model**<br>
 Test score: 0.52 <br>
 Test Mean Absolute Error: 130763.51 <br>
