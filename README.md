@@ -2,9 +2,11 @@
 
 ## Description : 
 
-This is a project about price prediction on the website Immoweb.<br>
+This is a project about price prediction on the website Immoweb with help of AI.<br>
 
-In the first part, I obtained the data by scraping them from Immoweb. More information can be found in the "data_acquisition" folder.<br>
+It's going to be in 4 steps : Scrapping, to get the data from Immoweb -> Data analyse, to understand the data set -> data modeling, to get the best model -> Deployement, heu I'll know later
+
+#### In the first part, I obtained the data by scraping them from Immoweb.<br>
 
 Once I had the data set, I needed to understand it. So, I had to clean the data, ask some questions to my dataset, and then make interpretations. More information can be found in the "data_analyze" folder. In this folder, you will find the "presentation.py" file, where you can find the code to create the two graphs presented in the "results." <br>
 
