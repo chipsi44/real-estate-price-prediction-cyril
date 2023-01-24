@@ -10,7 +10,8 @@ from sklearn.tree import DecisionTreeRegressor
 from data_modeling.data_formatting import training_testing_sets
 from sklearn.linear_model import LinearRegression
 import pandas as pd
-
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.preprocessing import StandardScaler
 '''
 
 No text data -> already done
@@ -25,7 +26,7 @@ def no_duplicates(pandas_data) :
 #No NANs
 def only_great_line(pandas_data) :
     # list of desired columns
-    columns_to_keep = ['locality','Price','Number_bedrooms', 'Living_area']
+    columns_to_keep = ['Price','Number_bedrooms', 'Living_area']
     #drop all columns that are not in the list
     df = pandas_data[columns_to_keep]
     df = df.dropna()
@@ -78,7 +79,7 @@ def normalize_scale(X) :
     #return X_scaled,y
     return X_scaled
 def drop_outliers(pandas_data) :
-    drop_outliers_from = ['locality','Price','Number_bedrooms', 'Living_area']
+    drop_outliers_from = ['Price','Number_bedrooms', 'Living_area']
     for col in drop_outliers_from:
         z_scores = zscore(pandas_data[col])
         filtered_entries = (z_scores.between(-3, 3, inclusive=False))
@@ -138,13 +139,36 @@ def ZipCode_AveragePrice(df_sell) :
     df_sell['locality'] = df_sell['locality'].replace(df_sell.groupby('locality')['Price'].mean())
     print(df_sell)
     return df_sell
-pandas_data = pd.read_csv('data_cleaned.csv')
 
+def try_knn(pandas_data) :
+    X = pandas_data.drop('Price',axis=1)
+    y = pandas_data["Price"]
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    knn = KNeighborsClassifier(n_neighbors=21)
+   
+    
+    knn.fit(X_train, y_train)
+    # use the model to make predictions on the test data
+    y_pred = knn.predict(X_test)
+
+    # evaluate the model's performance
+    # calculate MAE and MSE
+    mae = mean_absolute_error(y_test, y_pred)
+    mse = mean_squared_error(y_test, y_pred)
+    
+    # print the results
+    print(f'Test Mean Absolute Error: {mae:.2f}')
+    print(f'Test Mean Squared Error: {mse:.2f}')
+
+
+
+pandas_data = pd.read_csv('data_cleaned.csv')
 pandas_data = only_great_line(pandas_data)
 pandas_data = no_strong_corr(pandas_data)
 pandas_data = pandas_data[pandas_data.Price < 1000000]
-pandas_data = ZipCode_AveragePrice(pandas_data)
+pandas_data = pandas_data[pandas_data.Number_bedrooms > 0]
+#pandas_data = ZipCode_AveragePrice(pandas_data)
 pandas_data = drop_outliers(pandas_data)
-
 print(pandas_data)
-test_multiple_model(pandas_data)
+try_knn(pandas_data)
