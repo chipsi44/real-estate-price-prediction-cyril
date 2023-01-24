@@ -60,7 +60,10 @@ The data suggests that the presence of a fire place has the most significant imp
 </table>
 (I need to remake the graphs, I know! I'll do it later.)
 
-### Model results
+### Model results 
+- Test score: The test score is a measure of how well the model fits the test data. It is a value between -1 and 1, with higher values indicating a better fit.
+- Test MAE (Mean Absolute Error): The test MAE is a measure of the average difference between the predicted values and the actual values. The lower the value, the better the model is at predicting the test data. 
+- Test MSE (Mean Squared Error): The test MSE is a measure of the average of the square of the errors. The lower the value, the better the model is at predicting the test data.
 **linear_regression model** <br>
 Test score: -6.09 <br>
 Test MAE: 193230.63 <br>
@@ -98,7 +101,7 @@ This is done for the purpose of the training only.
 
 ## Visuals:
 
-matplotlib graphs <br>
+Matplotlib graphs <br>
 Exported as PNG at some points
 
 ## Contributors:
