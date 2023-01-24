@@ -19,6 +19,7 @@ def plot_outliers(df) :
     df[['Living_area']].boxplot()
 
     plt.show()
+
 '''
 wich variables would you delete and why, i'd delete the variable that are too high in Price and in living area. 
 Because exeptional properties or expetional Price could false the statistic ! Since Immoweb is made for Mrs Mr everybody,

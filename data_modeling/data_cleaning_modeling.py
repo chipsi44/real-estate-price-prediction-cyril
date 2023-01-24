@@ -1,5 +1,7 @@
 from sklearn.preprocessing import StandardScaler
+from scipy.stats import zscore
 import numpy as np
+
 
 
 '''
@@ -7,7 +9,7 @@ import numpy as np
 No text data -> already done
 
 '''
-# No duplicates -> Precision it's not real duplicate, it's different immo that have the same caracteristique
+# No duplicates -> Precision it's not real duplicate, it's different immo that have the same caracteristics
 def no_duplicates(pandas_data) : 
     pandas_data = pandas_data.drop_duplicates()
     if pandas_data[pandas_data.duplicated()].empty : 
@@ -16,7 +18,7 @@ def no_duplicates(pandas_data) :
 #No NANs
 def only_great_line(pandas_data) :
     # list of desired columns
-    columns_to_keep = ['locality', 'Price','Number_bedrooms', 'Living_area']
+    columns_to_keep = ['locality','Price','Number_bedrooms', 'Living_area']
     #drop all columns that are not in the list
     df = pandas_data[columns_to_keep]
     df = df.dropna()
@@ -52,10 +54,10 @@ def no_strong_corr(pandas_data) :
 
 #Use data normalization / scaling
 
-def normalize_scale(df) :
+def normalize_scale(X) :
     # Extract all columns except the second one (Price) and assign it to the variable X, and the second column (Price) is assigned to the variable y.
-    X = df.drop('Price',axis=1)
-    y = df["Price"]
+    #X = df.drop('Price',axis=1)
+    #y = df["Price"]
 
     # Create the StandardScaler object
     scaler = StandardScaler()
@@ -66,4 +68,12 @@ def normalize_scale(df) :
     # Transform the feature data using the scaler
     X_scaled = scaler.transform(X)
 
-    return X_scaled,y
+    #return X_scaled,y
+    return X_scaled
+def drop_outliers(pandas_data) :
+    drop_outliers_from = ['locality','Price','Number_bedrooms', 'Living_area']
+    for col in drop_outliers_from:
+        z_scores = zscore(pandas_data[col])
+        filtered_entries = (z_scores.between(-3, 3, inclusive=False))
+        pandas_data = pandas_data[filtered_entries]
+    return pandas_data
