@@ -65,30 +65,27 @@ The data suggests that the presence of a fire place has the most significant imp
 - Test MAE (Mean Absolute Error): The test MAE is a measure of the average difference between the predicted values and the actual values. The lower the value, the better the model is at predicting the test data. 
 - Test MSE (Mean Squared Error): The test MSE is a measure of the average of the square of the errors. The lower the value, the better the model is at predicting the test data.<br>
 
-**linear_regression model** <br>
-Test score: -6.09 <br>
-Test MAE: 193230.63 <br>
-Test MSE: 1548087208187.92 <br>
-
+**linear_regression model**<br>
+Test score: 0.47 <br>
+Test Mean Absolute Error: 153337.81 <br>
+Test Mean Squared Error: 122533131412.60 <br>
 **ridge model**<br>
-Test score: -6.07 <br>
-Test MAE: 193210.83 <br>
-Test MSE: 1544861136180.71 <br>
-
-**elastic_net model**<br>
-Test score: 0.23   <br>
-Test MAE: 192366.58 <br>
-Test MSE: 167438793285.93 <br>
-
+Test score: 0.47 <br>
+Test Mean Absolute Error: 153337.72 <br>
+Test Mean Squared Error: 122533971250.41 <br>
+**elastic_net model** <br>
+Test score: 0.39 <br>
+Test Mean Absolute Error: 162118.78<br>
+Test Mean Squared Error: 140711123397.07<br>
 **lasso model**<br>
-Test score: -6.08 <br>
-Test MAE: 193229.37 <br>
-Test MSE: 1547891047219.70 <br>
-
+Test score: 0.47<br>
+Test Mean Absolute Error: 153337.82<br>
+Test Mean Squared Error: 122533327518.79<br>
 **decision_tree model**<br>
-Test score: 0.42 <br>
-Test MAE: 145703.60 <br>
-Test MSE: 126690476526.32 <br>
+Test score: 0.52 <br>
+Test Mean Absolute Error: 130763.51 <br>
+Test Mean Squared Error: 109129686696.21 <br>
+
 
 Overall, the model results indicate that models are not performing well on the test data, with high test score, MAE and MSE. This suggests that the models may need further tuning or that a different approach may be needed to improve the predictions.
 ## Installation:
