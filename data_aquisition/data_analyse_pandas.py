@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from data_aquisition.data_cleaning import reference_dic_needed, clean_escape_characters
+from data_aquisition.data_refactoring import reference_dic_needed, clean_escape_characters
 from threading import RLock
 import requests
 import re
