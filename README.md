@@ -38,8 +38,10 @@ The "results" section of the README contains the testing and evaluation of diffe
 
 If you want to find the data set link.csv or immo_data.csv, the cleaned data (data_cleaned.csv) or the .png for the graph you can go in the **data_modeling branch**.
 ## State of the project : 
-- [x] this is a task list item
-- [ ] this is an incomplete task list item
+- [x] Scrapping
+- [x] Data analyse
+- [ ] Data modeling (work in progress)
+- [ ] Deployement (TBC)
 ## results : 
 ### Presentation : 
 <table>
