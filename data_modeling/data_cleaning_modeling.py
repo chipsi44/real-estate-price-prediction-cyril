@@ -1,6 +1,5 @@
 from sklearn.preprocessing import StandardScaler
 import numpy as np
-from zscore import zscore
 
 '''
 
@@ -20,7 +19,8 @@ def only_great_line(pandas_data) :
     #drop all columns that are not in the list
     df = pandas_data[columns_to_keep]
     df = df.dropna()
-
+    df = df[df.Price < 1000000]
+    df = df[df.Number_bedrooms > 0]
     return df 
 def drop_outliers(pandas_data) :
     drop_outliers_from = ['Price','Number_bedrooms', 'Living_area']
@@ -76,3 +76,8 @@ def normalize_scale(df) :
     X_scaled = scaler.transform(X)
 
     return X_scaled,y
+def ZipCode_AveragePrice(df_sell) :
+
+    df_sell['locality'] = df_sell['locality'].replace(df_sell.groupby('locality')['Price'].mean())
+
+    return df_sell

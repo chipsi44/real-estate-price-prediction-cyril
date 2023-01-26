@@ -1,7 +1,7 @@
 from data_aquisition.scrapper import get_urls_from_scrapper
 from data_aquisition.data_analyse_pandas import data_to_csv
 from data_analyse.data_cleaning import pandas_data
-from data_modeling.data_cleaning_modeling import no_duplicates,no_strong_corr,only_great_line, drop_outliers
+from data_modeling.data_cleaning_modeling import no_duplicates,no_strong_corr,only_great_line, drop_outliers,ZipCode_AveragePrice
 from threading import RLock
 from data_modeling.data_model_select_train_eval import test_multiple_model
 import threading
@@ -35,6 +35,8 @@ def main() :
     
     #Get results for different model
     pandas_data = pd.read_csv('data_cleaned.csv')
+    pandas_data = pandas_data[pandas_data['Type_property'] == 2]
+    pandas_data = ZipCode_AveragePrice(pandas_data)
     pandas_data = no_duplicates(pandas_data)
     pandas_data = only_great_line(pandas_data)
     pandas_data = no_strong_corr(pandas_data)
