@@ -43,7 +43,7 @@ The main branch will be used as the final branch, while the data_modeling branch
 ## State of the project : 
 - [x] Scrapping
 - [x] Data analyse
-- [ ] Data modeling (work in progress)
+- [x] Data modeling
 - [ ] Deployement (TBC)
 ## Results : 
 ### Presentation : 
