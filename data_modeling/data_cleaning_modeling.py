@@ -1,6 +1,6 @@
 from sklearn.preprocessing import StandardScaler
 import numpy as np
-
+from zscore import zscore
 
 '''
 
@@ -16,11 +16,20 @@ def no_duplicates(pandas_data) :
 #No NANs
 def only_great_line(pandas_data) :
     # list of desired columns
-    columns_to_keep = ['locality', 'Price', 'Type_property','Number_bedrooms', 'Living_area']
+    columns_to_keep = ['locality', 'Price','Number_bedrooms', 'Living_area']
     #drop all columns that are not in the list
     df = pandas_data[columns_to_keep]
     df = df.dropna()
+
     return df 
+def drop_outliers(pandas_data) :
+    drop_outliers_from = ['Price','Number_bedrooms', 'Living_area']
+    for col in drop_outliers_from:
+        z_scores = zscore(pandas_data[col])
+        filtered_entries = (z_scores.between(-3, 3, inclusive=False))
+        pandas_data = pandas_data[filtered_entries]
+    return pandas_data
+
 
 #No features that have too strong correlation between them
 def no_strong_corr(pandas_data) : 
