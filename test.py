@@ -26,7 +26,7 @@ def no_duplicates(pandas_data) :
 #No NANs
 def only_great_line(pandas_data) :
     # list of desired columns
-    columns_to_keep = ['Price','Number_bedrooms', 'Living_area']
+    columns_to_keep = ['locality','Price','Number_bedrooms', 'Living_area']
     #drop all columns that are not in the list
     df = pandas_data[columns_to_keep]
     df = df.dropna()
@@ -164,11 +164,11 @@ def try_knn(pandas_data) :
 
 
 pandas_data = pd.read_csv('data_cleaned.csv')
+pandas_data = pandas_data[pandas_data['Type_property'] == 2]
 pandas_data = only_great_line(pandas_data)
-pandas_data = no_strong_corr(pandas_data)
 pandas_data = pandas_data[pandas_data.Price < 1000000]
 pandas_data = pandas_data[pandas_data.Number_bedrooms > 0]
-#pandas_data = ZipCode_AveragePrice(pandas_data)
+pandas_data = ZipCode_AveragePrice(pandas_data)
 pandas_data = drop_outliers(pandas_data)
 print(pandas_data)
-try_knn(pandas_data)
+test_multiple_model(pandas_data)
