@@ -72,22 +72,22 @@ We have arround 60K rows, for each rows we have those columns : <br>
   </thead>
   <tbody>
     <tr>
-      <td>Value 1</td>
-      <td>Value 2</td>
-      <td>Value 3</td>
-      <td>Value 4</td>
-      <td>Value 5</td>
-      <td>Value 6</td>
-      <td>Value 7</td>
-      <td>Value 8</td>
-      <td>Value 9</td>
-      <td>Value 10</td>
-      <td>Value 11</td>
-      <td>Value 12</td>
-      <td>Value 13</td>
-      <td>Value 14</td>
-      <td>Value 15</td>
-      <td>Value 16</td>
+      <td>Zip Code</td>
+      <td>Int</td>
+      <td>Str (House, flat, ...)</td>
+      <td>Rent or sale</td>
+      <td>Int</td>
+      <td>Float</td>
+      <td>Str (Semi, full, No, ...)</td>
+      <td>Boolean</td>
+      <td>Float (Surface of the terrace)</td>
+      <td>Float (Surface of the Garden)</td>
+      <td>Float</td>
+      <td>Float</td>
+      <td>Int</td>
+      <td>Boolean</td>
+      <td>Str (New, to renovate, ...)</td>
+      <td>Boolean</td>
     </tr>
   </tbody>
 </table>
