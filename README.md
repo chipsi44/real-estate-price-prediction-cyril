@@ -131,8 +131,7 @@ The data suggests that the presence of a fire place has one of the 5 most signif
 | Lasso | 0.57 | 72333.10 | 9319209940.24 |
 | Decision Tree | 0.13 | 101784.48 | 18796478598.4 |
 
-
-Going to choose models that have a test score higher than 0.50
+In order to ensure high performance, models will be selected based on their test score exceeding a threshold of 0.50.
 ## Installation and how to use:
 
 pip install -r requirements.txt <br>
