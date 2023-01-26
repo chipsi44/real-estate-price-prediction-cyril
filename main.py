@@ -11,8 +11,8 @@ import pandas as pd
 lock = RLock()
  
 def main() :
+    get_urls_from_scrapper()
     # DO THE SCRAPPER TAKE : 40MIN / You need to have your CSV link file.
-    #get_urls_from_scrapper()
     threads_list = []
     with open('immo_data.csv', 'w') as data_file : 
         data_file.write('locality,Price,Type_property,Sale_type,Number_bedrooms,Living_area,fully_equipped_kitchen,Furnished,terrace,garden,surface_land,surface_area_plot,facades_number,Swimming_pool,building_state,fire_place\n')
