@@ -50,9 +50,11 @@ The main branch will be used as the final branch, while the data_modeling branch
 ### Data Scrapped : 
 We have arround 60K rows, for each rows we have those columns : <br>
 
+<style>
 table {
   word-break: keep-all; /* prevent line breaks within cells */
 }
+</style>
 
 <table>
   <thead>
