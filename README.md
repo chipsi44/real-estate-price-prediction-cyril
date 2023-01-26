@@ -50,7 +50,7 @@ The main branch will be used as the final branch, while the data_modeling branch
 ### Data Scrapped : 
 We have arround 60K rows, for each rows we have those columns : <br>
 
-<table style="table-layout: fixed;">
+<table>
   <thead>
     <tr>
       <th>Locality</th>
@@ -73,22 +73,22 @@ We have arround 60K rows, for each rows we have those columns : <br>
   </thead>
   <tbody>
     <tr>
-      <td style="overflow: hidden;">Int (Zip Code)</td>
-      <td style="word-break: keep-all;">Int</td>
-      <td style="word-break: keep-all;">Str (House, flat, ...)</td>
-      <td style="word-break: keep-all;">Rent or sale</td>
-      <td style="word-break: keep-all;">Int</td>
-      <td style="word-break: keep-all;">Float</td>
-      <td style="word-break: keep-all;">Str (Semi, full, No, ...)</td>
-      <td style="word-break: keep-all;">Boolean</td>
-      <td style="word-break: keep-all;">Float (Surface of the terrace)</td>
-      <td style="word-break: keep-all;">Float (Surface of the Garden)</td>
-      <td style="word-break: keep-all;">Float</td>
-      <td style="word-break: keep-all;">Float</td>
-      <td style="word-break: keep-all;">Int</td>
-      <td style="word-break: keep-all;">Boolean</td>
-      <td style="word-break: keep-all;">Str (New, to renovate, ...)</td>
-      <td style="word-break: keep-all;">Boolean</td>
+      <td>Int (Zip Code)</td>
+      <td>Int</td>
+      <td>Str (House, flat, ...)</td>
+      <td>Rent or sale</td>
+      <td>Int</td>
+      <td>Float</td>
+      <td>Str (Semi, full, No, ...)</td>
+      <td>Boolean</td>
+      <td>Float (Surface of the terrace)</td>
+      <td>Float (Surface of the Garden)</td>
+      <td>Float</td>
+      <td>Float</td>
+      <td>Int</td>
+      <td>Boolean</td>
+      <td>Str (New, to renovate, ...)</td>
+      <td>Boolean</td>
     </tr>
   </tbody>
 </table>
