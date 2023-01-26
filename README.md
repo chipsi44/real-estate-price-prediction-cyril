@@ -137,8 +137,7 @@ In order to ensure high performance, models will be selected based on their test
 pip install -r requirements.txt <br>
 Requirements.txt file is available !<br>
 
-To use the project, launch the main.py from the main branch. <br>
-If you already have some of the CSV file you can comment some part of the main code to make it faster. (The code is well commented, it's easy to find wich part to comment.)
+To utilize the project, execute the main.py script located in the main branch. For faster execution, consider commenting out sections of the main code that pertain to loading CSV files, in the event that they have already been obtained. The code is well-documented, making it easy to identify the specific sections to comment.
 ## Usage:
 
 The data recolted are not used for any commercial activities. <br>
