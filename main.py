@@ -11,8 +11,7 @@ import pandas as pd
 lock = RLock()
  
 def main() :
-    # DO THE SCRAPPER TAKE : 40MIN 
-    '''    
+    # DO THE SCRAPPER TAKE : 40MIN / You need to have your CSV link file.
     #get_urls_from_scrapper()
     threads_list = []
     with open('immo_data.csv', 'w') as data_file : 
@@ -28,12 +27,12 @@ def main() :
         time.sleep(0.5)
     for tt in threads_list : 
         tt.join()
-    '''
+    
     # CREATE DATA_CLEANED.CSV take : 30SEC
     
-    '''cleaned_csv = pandas_data("immo_data.csv")
+    cleaned_csv = pandas_data("immo_data.csv")
     cleaned_csv.pandas_data.to_csv("data_cleaned.csv", index=False)
-    '''
+    
     #Get results for different model
     pandas_data = pd.read_csv('data_cleaned.csv')
     pandas_data = no_duplicates(pandas_data)
