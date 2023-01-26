@@ -58,7 +58,7 @@ The main branch will be used as the final branch, while the data_modeling branch
 - [ ] Deployement (TBC)
 ## Results : 
 ### Data Scrapped : 
-We have arround 60K rows, for each rows we have those columns : <br>
+The dataset comprises approximately 60,000 rows, with the following columns present for each row: <br>
 
 <table>
   <thead>
