@@ -73,7 +73,7 @@ We have arround 60K rows, for each rows we have those columns : <br>
   </thead>
   <tbody>
     <tr>
-      <td>Int (Zip Code)</td>
+      <td style="width: 500px;">Int (Zip Code)</td>
       <td>Int</td>
       <td>Str (House, flat, ...)</td>
       <td>Rent or sale</td>
