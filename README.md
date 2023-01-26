@@ -50,7 +50,7 @@ The main branch will be used as the final branch, while the data_modeling branch
 ### Data Scrapped : 
 We have arround 60K rows, for each rows we have those columns : <br>
 
-<table>
+<table style="table-layout: fixed;">
   <thead>
     <tr>
       <th>Locality</th>
