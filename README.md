@@ -103,7 +103,7 @@ We have arround 60K rows, for each rows we have those columns : <br>
   </tbody>
 </table>
 
-When **cleaning the data** all the str and boolean are converted to int ! 
+During the **data cleaning** process, all string and boolean values will be converted to integers ! 
 
 ### Presentation : 
 The data suggests that the presence of a fire place has one of the 5 most significant impact on the price of a property. However, it may be due to a lack of data on the topic. To improve the accuracy and completeness of the data, it would be beneficial to make it mandatory for property owners or real estate agents to provide information about the presence of a fire place when listing a property. This would also be beneficial for potential buyers as it would help them make better decisions based on the features they are looking for. The two graphs presented in the analysis aim to demonstrate the importance of collecting data about the presence of a fire place and the potential benefits of implementing this requirement on the platform.
