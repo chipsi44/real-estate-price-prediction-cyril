@@ -137,10 +137,13 @@ Test Mean Absolute Error: 101784.48 <br>
 Test Mean Squared Error: 18796478598.45 <br>
 
 Going to choose models that have a test score higher than 0.50
-## Installation:
+## Installation and how to use:
 
 pip install -r requirements.txt <br>
-Requirements.txt file is available !
+Requirements.txt file is available !<br>
+
+To use the project, launch the main.py from the main branch. <br>
+If you already have some of the CSV file you can comment some part of the main code to make it faster. (The code is well commented, it's easy to find wich part to comment.)
 ## Usage:
 
 The data recolted are not used for any commercial activities. <br>
