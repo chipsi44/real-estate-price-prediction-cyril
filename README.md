@@ -73,7 +73,7 @@ We have arround 60K rows, for each rows we have those columns : <br>
   </thead>
   <tbody>
     <tr>
-      <td style="word-break: keep-all;">Int (Zip Code)</td>
+      <td style="overflow: hidden;">Int (Zip Code)</td>
       <td style="word-break: keep-all;">Int</td>
       <td style="word-break: keep-all;">Str (House, flat, ...)</td>
       <td style="word-break: keep-all;">Rent or sale</td>
