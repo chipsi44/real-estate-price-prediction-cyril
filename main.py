@@ -43,7 +43,7 @@ def main() :
     pandas_data = only_great_line(pandas_data)
     pandas_data = no_strong_corr(pandas_data)
     pandas_data = drop_outliers(pandas_data)
-    
+    #OutPut value in the readme
     test_multiple_model(pandas_data)
 
 if __name__ == '__main__' :
