@@ -11,6 +11,7 @@ import pandas as pd
 lock = RLock()
  
 def main() :
+    #Create the CSV link file
     get_urls_from_scrapper()
     # DO THE SCRAPPER TAKE : 40MIN / You need to have your CSV link file.
     threads_list = []
