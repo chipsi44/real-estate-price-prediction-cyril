@@ -4,7 +4,13 @@
 
 This is a project about price prediction on the website Immoweb with help of AI.<br>
 
-It's going to be in 4 steps : Scrapping, to get the data from Immoweb -> Data analyse, to understand the data set -> data modeling, to get the best model -> Deployement, heu I'll know later
+It's going to be in 4 steps : 
+1. **Scrapping**: Scraping refers to the process of extracting data from websites, in this case from Immoweb. This can be done using a variety of tools and libraries, such as BeautifulSoup, Scrapy, or Selenium. The goal of scraping is to gather the data needed for the project, such as real estate listings and prices.
+
+2. **Data Analysis**: Once the data is collected, the next step is to analyze it. This includes cleaning and preprocessing the data, as well as exploring and visualizing it to gain insights and understanding of the dataset. This step is important in order to identify patterns, trends, and outliers in the data, and to determine which features are important for the model.
+
+3. **Data Modeling**: After the data has been cleaned, preprocessed and explored, the next step is to build a machine learning model. This step involves selecting an appropriate algorithm, training the model on the dataset, and evaluating its performance. The goal is to find the best model that can accurately predict real estate prices. This step may involve multiple iterations of selecting and tuning the model, evaluating different features, and adjusting the parameters. Once a satisfactory model is found, it can be saved and exported for deployment.
+4. **Deployement**: the deployment part refers to the process of taking a trained machine learning model and making it available for use in a production environment. 
 
 #### Scrapping part<br>
 
