@@ -66,32 +66,31 @@ The data suggests that the presence of a fire place has the most significant imp
 - Test MSE (Mean Squared Error): The test MSE is a measure of the average of the square of the errors. The lower the value, the better the model is at predicting the test data.<br>
 
 **linear_regression model**<br>
-Test score: 0.47 <br>
-Test Mean Absolute Error: 153337.81 <br>
-Test Mean Squared Error: 122533131412.60 <br>
+Test score: 0.57 <br>
+Test Mean Absolute Error: 72333.11 <br>
+Test Mean Squared Error: 9319215038.32<br>
 
 **ridge model**<br>
-Test score: 0.47 <br>
-Test Mean Absolute Error: 153337.72 <br>
-Test Mean Squared Error: 122533971250.41 <br>
+Test score: 0.57 <br>
+Test Mean Absolute Error: 72333.05 <br>
+Test Mean Squared Error: 9319214776.91 <br>
 
 **elastic_net model** <br>
-Test score: 0.39 <br>
-Test Mean Absolute Error: 162118.78<br>
-Test Mean Squared Error: 140711123397.07<br>
+Test score: 0.52 <br>
+Test Mean Absolute Error: 76916.42 <br>
+Test Mean Squared Error: 10329782560.707<br>
 
 **lasso model**<br>
-Test score: 0.47<br>
-Test Mean Absolute Error: 153337.82<br>
-Test Mean Squared Error: 122533327518.79<br>
+Test score: 0.57<br>
+Test Mean Absolute Error: 72333.10 <br>
+Test Mean Squared Error: 9319209940.24<br>
 
 **decision_tree model**<br>
-Test score: 0.52 <br>
-Test Mean Absolute Error: 130763.51 <br>
-Test Mean Squared Error: 109129686696.21 <br>
+Test score: 0.13 <br>
+Test Mean Absolute Error: 101784.48 <br>
+Test Mean Squared Error: 18796478598.45 <br>
 
-
-Overall, the model results indicate that models are not performing well on the test data, with high test score, MAE and MSE. This suggests that the models may need further tuning or that a different approach may be needed to improve the predictions.
+Going to choose models that have a test score higher than 0.50
 ## Installation:
 
 pip install -r requirements.txt <br>
