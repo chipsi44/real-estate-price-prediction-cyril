@@ -42,8 +42,9 @@ After understanding the data set, the next step is to predict prices on Belgium'
 
 The "results" section of the README contains the testing and evaluation of different models, showing the performance of each one. It is important to keep in mind that the choice of model and the parameters used may have an effect on the performance of the prediction. Therefore, it is important to compare the performance of different models and choose the one that performs the best.
 
-### Deployement part <br>
+#### Deployement part <br>
 This part of the project is currently in progress. More information will be made available at a later time.
+
 ### main.py info <br>
 The main file in the project contains a lot of commented parts because it is optimized for speed by saving different information in CSV files. This way, the data does not have to be scrapped, refactored, and cleaned every time a test is run. The main file is also divided into different sections, each of which launches a specific part of the project. This allows for easy navigation and execution of individual parts of the project, rather than having to run the entire project every time. The use of CSV files also allows for the data to be stored and used for future analysis without having to re-scrap and clean the data again.
 
