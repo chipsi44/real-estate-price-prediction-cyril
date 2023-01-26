@@ -47,6 +47,51 @@ The main branch will be used as the final branch, while the data_modeling branch
 - [x] Data modeling
 - [ ] Deployement (TBC)
 ## Results : 
+### Data Scrapped : 
+We have arround 60K rows, for each rows we have those columns : <br>
+<table>
+  <thead>
+    <tr>
+      <th>Locality</th>
+      <th>Price</th>
+      <th>Type_property</th>
+      <th>Sale_type</th>
+      <th>Number_bedrooms</th>
+      <th>Living_area</th>
+      <th>Fully_equipped_kitchen</th>
+      <th>Furnished</th>
+      <th>Terrace</th>
+      <th>Garden</th>
+      <th>Surface_land</th>
+      <th>Surface_area_plot</th>
+      <th>Facades_number</th>
+      <th>Swimming_pool</th>
+      <th>Building_state</th>
+      <th>Fire_place</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Value 1</td>
+      <td>Value 2</td>
+      <td>Value 3</td>
+      <td>Value 4</td>
+      <td>Value 5</td>
+      <td>Value 6</td>
+      <td>Value 7</td>
+      <td>Value 8</td>
+      <td>Value 9</td>
+      <td>Value 10</td>
+      <td>Value 11</td>
+      <td>Value 12</td>
+      <td>Value 13</td>
+      <td>Value 14</td>
+      <td>Value 15</td>
+      <td>Value 16</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Presentation : 
 The data suggests that the presence of a fire place has the most significant impact on the price of a property. However, it may be due to a lack of data on the topic. To improve the accuracy and completeness of the data, it would be beneficial to make it mandatory for property owners or real estate agents to provide information about the presence of a fire place when listing a property. This would also be beneficial for potential buyers as it would help them make better decisions based on the features they are looking for. The two graphs presented in the analysis aim to demonstrate the importance of collecting data about the presence of a fire place and the potential benefits of implementing this requirement on the platform.
 <table>
