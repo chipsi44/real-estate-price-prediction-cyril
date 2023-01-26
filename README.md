@@ -12,7 +12,7 @@ It's going to be in 4 steps :
 3. **Data Modeling**: After the data has been cleaned, preprocessed and explored, the next step is to build a machine learning model. This step involves selecting an appropriate algorithm, training the model on the dataset, and evaluating its performance. The goal is to find the best model that can accurately predict real estate prices. This step may involve multiple iterations of selecting and tuning the model, evaluating different features, and adjusting the parameters. Once a satisfactory model is found, it can be saved and exported for deployment.
 4. **Deployement**: the deployment part refers to the process of taking a trained machine learning model and making it available for use in a production environment. 
 
-#### Scrapping part<br>
+#### Scrapping part <br>
 
 In the project, the folder named "data_acquisition" contains all the Python scripts related to the scraping process. Scraping refers to the process of extracting data from websites or other sources. The scripts in the data_acquisition folder are used to collect and process the data needed for the project.<br>
 
@@ -22,7 +22,7 @@ You'll find differents python file : <br>
 - data_analyse_pandas.py is used to scrape information from a website, specifically immoweb, related to properties. The script extracts data such as the 'locality','Price','Type_property' ,'Sale_type','number_bedrooms','Living_area','fully_equipped_kitchen','Furnished','terrace','garden','surface_land','surface_area_plot','facades_number','Swimming_pool','building_state' ,'fire_place' and converts them into a pandas data frame. The data is then saved in a CSV file for further analysis. This script allows you to collect the data you need and put it in a structured format that is easy to work with.
  - data_refactoring.py is used to clean and organize the data acquired through scraping. It removes any unnecessary HTML elements and special characters, as well as any excess whitespace. The script is also used to standardize and improve the names of the columns in the data set, making it more readable and usable for further analysis. The goal is to get a 'cleaned' data that is ready for further processing and analysis.
 
-#### data analyse<br>
+#### Data analysis part <br>
 
 After acquiring the data set, it is important to understand it by cleaning the data and asking specific questions to gain insights. Data cleaning is the process of removing or modifying data that is incorrect, incomplete, irrelevant or duplicated. Once the data is cleaned, you can start asking questions to the data set, such as finding the average price of properties in a certain area or the number of properties with a certain number of bedrooms. These questions can be answered using various data analysis techniques such as filtering, sorting, and aggregation. Finally, you can make interpretations of the data by using visualization techniques such as charts and graphs to help identify patterns, trends and outliers in the data. With a cleaned, organized and well-understood data set, you can make informed decisions and insights.<br>
 
@@ -31,7 +31,7 @@ You'll find differents python file : <br>
 - data_analysis.py and data_interpretation.py are used to understand the data set and ask specific questions. These scripts can be used to perform various data analysis techniques such as filtering, sorting and aggregation. The data analysis script can be used to answer questions about the data, such as finding the average price of properties in a certain area or the number of properties with a certain number of bedrooms. The data interpretation script is used to make sense of the data, by using visualization techniques such as charts and graphs to help identify patterns, trends, and outliers in the data. These scripts allow you to understand the data set and gain valuable insights.
 - presentation.py is used to create two graphs that are presented in the results part. 
 
-#### data modeling<br>
+#### Data modeling part <br>
 
 After understanding the data set, the next step is to predict prices on Belgium's real estate sales using machine learning. The process typically involves the following steps:
 
@@ -41,6 +41,9 @@ After understanding the data set, the next step is to predict prices on Belgium'
 - Evaluating the model using metrics such as mean squared error, mean absolute error, and score. <br>
 
 The "results" section of the README contains the testing and evaluation of different models, showing the performance of each one. It is important to keep in mind that the choice of model and the parameters used may have an effect on the performance of the prediction. Therefore, it is important to compare the performance of different models and choose the one that performs the best.
+
+### Deployement part <br>
+This part of the project is currently in progress. More information will be made available at a later time.
 ### main.py info <br>
 The main file in the project contains a lot of commented parts because it is optimized for speed by saving different information in CSV files. This way, the data does not have to be scrapped, refactored, and cleaned every time a test is run. The main file is also divided into different sections, each of which launches a specific part of the project. This allows for easy navigation and execution of individual parts of the project, rather than having to run the entire project every time. The use of CSV files also allows for the data to be stored and used for future analysis without having to re-scrap and clean the data again.
 
