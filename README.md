@@ -106,7 +106,7 @@ We have arround 60K rows, for each rows we have those columns : <br>
 When **cleaning the data** all the str and boolean are converted to int ! 
 
 ### Presentation : 
-The data suggests that the presence of a fire place has the most significant impact on the price of a property. However, it may be due to a lack of data on the topic. To improve the accuracy and completeness of the data, it would be beneficial to make it mandatory for property owners or real estate agents to provide information about the presence of a fire place when listing a property. This would also be beneficial for potential buyers as it would help them make better decisions based on the features they are looking for. The two graphs presented in the analysis aim to demonstrate the importance of collecting data about the presence of a fire place and the potential benefits of implementing this requirement on the platform.
+The data suggests that the presence of a fire place has one of the 5 most significant impact on the price of a property. However, it may be due to a lack of data on the topic. To improve the accuracy and completeness of the data, it would be beneficial to make it mandatory for property owners or real estate agents to provide information about the presence of a fire place when listing a property. This would also be beneficial for potential buyers as it would help them make better decisions based on the features they are looking for. The two graphs presented in the analysis aim to demonstrate the importance of collecting data about the presence of a fire place and the potential benefits of implementing this requirement on the platform.
 <table>
   <tr>
     <td>
@@ -117,7 +117,6 @@ The data suggests that the presence of a fire place has the most significant imp
     </td>
   </tr>
 </table>
-(I need to remake the graphs, I know! I'll do it later.)
 
 ### Model results 
 - Test score: The test score is a measure of how well the model fits the test data. It is a value between -1 and 1, with higher values indicating a better fit.
