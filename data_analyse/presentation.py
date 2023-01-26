@@ -25,26 +25,26 @@ def missing_value(df_data) :
     plt.xlabel('Columns')
     plt.ylabel('Percentage of missing values')
     plt.show()
-
-def terrace_property(df) :
-    '''
-    df : pandas data frame
-    '''
-    # Select rows where the 'Terrace' column contains a value
-    terraced_properties = df[df["terrace"].notnull()]
-
-    # Count the types of properties with a terrace
-    property_counts = terraced_properties["Type_property"].value_counts()
-
-    # Print the results
-    print(property_counts)
-
-    # Create a bar chart of the property counts
-    property_counts.plot(kind='bar')
-
-    # Add a title
-    plt.title("Type of property with terrace")
-
-    # Show the chart
+def most_influence_price(df):
+    df = df[['locality','Price','Type_property','Number_bedrooms','Living_area','fire_place']]
+    df.dropna()
+    #calculating correlation between the price column and all other columns
+    corr = df.corr()
+    corr_price = corr['Price']
+    
+    #sorting the correlation values and getting the top 10 highest correlated values
+    corr_price = corr_price.sort_values(ascending=False)
+    top_corr = corr_price.iloc[1:11]
+    
+    # Creating a heatmap
+    plt.figure(figsize=(10,8))
+    plt.title('Top 5 columns influencing price')
+    plt.xlabel('Columns')
+    plt.ylabel('Correlation')
+    plt.imshow(top_corr.values.reshape(1,-1), cmap='Reds', vmin=-1, vmax=1)
+    plt.xticks(range(len(top_corr)), top_corr.index, rotation=45)
+    plt.colorbar()
     plt.show()
+
+
 
