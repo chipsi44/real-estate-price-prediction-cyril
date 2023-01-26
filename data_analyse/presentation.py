@@ -25,6 +25,7 @@ def missing_value(df_data) :
     plt.xlabel('Columns')
     plt.ylabel('Percentage of missing values')
     plt.show()
+
 def terrace_property(df) :
     '''
     df : pandas data frame
