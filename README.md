@@ -53,7 +53,7 @@ We have arround 60K rows, for each rows we have those columns : <br>
 <table>
   <thead>
     <tr>
-      <th>Locality</th>
+      <th style="width: 500px;">Locality</th>
       <th>Price</th>
       <th>Type_property</th>
       <th>Sale_type</th>
@@ -73,7 +73,7 @@ We have arround 60K rows, for each rows we have those columns : <br>
   </thead>
   <tbody>
     <tr>
-      <td style="width: 500px;">Int (Zip Code)</td>
+      <td>Int (Zip Code)</td>
       <td>Int</td>
       <td>Str (House, flat, ...)</td>
       <td>Rent or sale</td>
