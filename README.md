@@ -53,7 +53,7 @@ We have arround 60K rows, for each rows we have those columns : <br>
 <table>
   <thead>
     <tr>
-      <th style="width: 500px;">Locality</th>
+      <th>Locality</th>
       <th>Price</th>
       <th>Type_property</th>
       <th>Sale_type</th>
