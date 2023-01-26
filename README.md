@@ -129,7 +129,7 @@ The data suggests that the presence of a fire place has one of the 5 most signif
 | Ridge | 0.57 | 72333.05 | 9319214776.91 |
 | Elastic Net | 0.52 | 76916.42 | 10329782560.707 |
 | Lasso | 0.57 | 72333.10 | 9319209940.24 |
-| Decision Tree | 0.13 | 101784.48 | 18796478598.45 |
+| Decision Tree | 0.13 | 101784.48 | 18796478598.4 |
 
 
 Going to choose models that have a test score higher than 0.50
