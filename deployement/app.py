@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import pandas as pd
 import pickle
 
-with open("deployement\model.pickle", "rb") as f:
+with open("deployement/model.pickle", "rb") as f:
     model = pickle.load(f)
 
 app = Flask(__name__)
