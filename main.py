@@ -11,7 +11,7 @@ import pandas as pd
 lock = RLock()
  
 def main() :
-    #Create the CSV link file
+    '''#Create the CSV link file
     get_urls_from_scrapper()
     # DO THE SCRAPPER TAKE : 40MIN / You need to have your CSV link file.
     threads_list = []
@@ -33,7 +33,7 @@ def main() :
     
     cleaned_csv = pandas_data("immo_data.csv")
     cleaned_csv.pandas_data.to_csv("data_cleaned.csv", index=False)
-    
+    '''
     #Get results for different model
     pandas_data = pd.read_csv('data_cleaned.csv')
     #Only keep the house for the prediciton
