@@ -135,6 +135,10 @@ The data suggests that the presence of a fire place has one of the 5 most signif
 | Decision Tree | 0.13 | 101784.48 | 18796478598.4 |
 
 In order to ensure high performance, models will be selected based on their test score exceeding a threshold of 0.50.
+
+### Docker line
+docker build -t house-prediction-app . <br>
+docker run -d -p 5000:5000 house-prediction-app
 ## Installation and how to use:
 
 pip install -r requirements.txt <br>
