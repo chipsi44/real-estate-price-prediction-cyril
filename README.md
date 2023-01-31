@@ -175,7 +175,7 @@ Website (HTML5/CSS3)
 Andy Gilet <br>
 Cyril Verwimp <br>
 Ibrahim Mettioui <br>
-**Second and third week (Data analyse + data modeling ) :** <br>
+**Second, third and fourth week (Data analyse + data modeling + deployement ) :** <br>
 Cyril Verwimp
 ## Timeline:
 first week (5 days) : **Data acquisition** <br>
