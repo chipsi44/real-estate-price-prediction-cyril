@@ -183,3 +183,5 @@ first week (5 days) : **Data acquisition** <br>
 Second week (7 days) : **Data analyse** <br>
 
 Third week (6 days) : **Data modeling** <br>
+
+Fourth week(6 days) : **deployement**
