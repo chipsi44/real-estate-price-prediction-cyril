@@ -10,7 +10,7 @@ It's going to be in 4 steps :
 2. **Data Analysis**: Once the data is collected, the next step is to analyze it. This includes cleaning and preprocessing the data, as well as exploring and visualizing it to gain insights and understanding of the dataset. This step is important in order to identify patterns, trends, and outliers in the data, and to determine which features are important for the model.
 
 3. **Data Modeling**: After the data has been cleaned, preprocessed and explored, the next step is to build a machine learning model. This step involves selecting an appropriate algorithm, training the model on the dataset, and evaluating its performance. The goal is to find the best model that can accurately predict real estate prices. This step may involve multiple iterations of selecting and tuning the model, evaluating different features, and adjusting the parameters. Once a satisfactory model is found, it can be saved and exported for deployment.
-4. **Deployement**: the deployment part refers to the process of taking a trained machine learning model and making it available for use in a production environment. 
+4. **Deployement**: The deployment process involves integrating a trained machine learning model into a production environment, making it accessible and operational for end-users. This project specifically involves hosting the model on a web page through the use of Docker technology.
 
 #### Scrapping part <br>
 
@@ -43,22 +43,35 @@ After understanding the data set, the next step is to predict prices on Belgium'
 The "results" section of the README contains the testing and evaluation of different models, showing the performance of each one. It is important to keep in mind that the choice of model and the parameters used may have an effect on the performance of the prediction. Therefore, it is important to compare the performance of different models and choose the one that performs the best.
 
 #### Deployement part <br>
-This part of the project is currently in progress. More information will be made available at a later time.
+After conducting an extensive model selection process, the linear regression model was determined to be the most suitable for our purposes. The following outlines the steps taken to operationalize and deploy the linear regression model in a production environment:
 
+- Utilize the optimized linear regression model to make predictions on new, unseen data. The model will be trained specifically for either houses or apartments. This will ensure accurate predictions for the respective property type.
+- Perform data preprocessing to ensure that the input data is in a format that is suitable for model consumption.
+- Utilize the trained model to make predictions based on the provided zip code, number of bedrooms, living area, and type of property.
+- Develop a dynamic web interface utilizing HTML and CSS, which will enable data input through a user-friendly form and present the output of the prediction .
+- Deploy the app to a Docker container and launch the container to make the website accessible to end-users.
+- Deploy the Docker container on Render.com to make the website accessible and available to the public.
 ### main.py info <br>
 The main file in the project contains a lot of commented parts because it is optimized for speed by saving different information in CSV files. This way, the data does not have to be scrapped, refactored, and cleaned every time a test is run. The main file is also divided into different sections, each of which launches a specific part of the project. This allows for easy navigation and execution of individual parts of the project, rather than having to run the entire project every time. The use of CSV files also allows for the data to be stored and used for future analysis without having to re-scrap and clean the data again.
 
 ### Branch info <br>
-The main branch will be used as the final branch, while the data_modeling branch will be used to keep track of the development of the data modeling process. 
-#### data_modeling branch
-In the data_modeling branch, you can find the data sets such as link.csv or immo_data.csv, the cleaned data (data_cleaned.csv), as well as the .png files for the graphs. This branch contains all the intermediate files that were generated during the data modeling process and allows for access to the data at different stages of the project. (Please only look at the CSV file, the code will make you cry. :cry:)<br>
+- The main branch will be used as the final branch
+- The data_modeling branch will be used to keep track of the development of the data modeling process. 
+- The deployment branch is utilized to manage and monitor the deployment process and its corresponding code. The focus of this branch is solely on the deployment directory.
 #### main branch
  The main branch, on the other hand, contains the final version of the project that is ready for use or presentation.
+#### data_modeling branch
+In the data_modeling branch, you can find the data sets such as link.csv or immo_data.csv, the cleaned data (data_cleaned.csv), as well as the .png files for the graphs. This branch contains all the intermediate files that were generated during the data modeling process and allows for access to the data at different stages of the project. (Please only look at the CSV file, the code will make you cry. :cry:)<br>
+#### deployment branch
+In the deployement branch you'll find differents directory :
+- preprocessing  : that will contain all the code that will be used to preprocess the data you will receive to predict a new price.
+- predict : that will contain all the code used to predict a new estate price.
+- model : that will contain the model.
 ## State of the project : 
 - [x] Scrapping
 - [x] Data analysis
 - [x] Data modeling
-- [ ] Deployement (TBC)
+- [x] Deployement
 ## Results : 
 ### Data Scrapped : 
 The dataset comprises approximately 60,000 rows, with the following columns present for each row: <br>
@@ -153,7 +166,9 @@ This is done for the purpose of the training only.
 ## Visuals:
 
 Matplotlib graphs <br>
-Exported as PNG at some points
+Exported as PNG at some points<br>
+
+Website (HTML5/CSS3)
 
 ## Contributors:
 **First week (Data acquisition) :** <br>
