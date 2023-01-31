@@ -4,6 +4,9 @@ import pandas as pd
 import pickle
 import json
 
+#appartements = 0
+#House = 2 
+
 with open("deployement/model.pickle", "rb") as f:
     model = pickle.load(f)
 
