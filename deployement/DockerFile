@@ -13,5 +13,6 @@ RUN pip install --upgrade pip && \
 # Copy the rest of the files to the container
 COPY . .
 COPY model.pickle ./deployement/model.pickle
+COPY ZipCode_MeanPrice.json ./deployement/ZipCode_MeanPrice.json
 # Specify the command to run when the container starts
 CMD ["flask", "run", "--host=0.0.0.0"]

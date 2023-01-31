@@ -1,7 +1,7 @@
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 from scipy.stats import zscore
-
+import json
 '''
 
 No text data -> already done
@@ -77,8 +77,21 @@ def normalize_scale(df) :
     X_scaled = scaler.transform(X)
 
     return X_scaled,y
-def ZipCode_AveragePrice(df_sell) :
+def ZipCode_AveragePrice(df_sell):
+   # Group the data by the 'locality' column and calculate the mean of the 'Price' column
+    df_grouped = df_sell.groupby('locality')['Price'].mean()
 
-    df_sell['locality'] = df_sell['locality'].replace(df_sell.groupby('locality')['Price'].mean())
+    # Replace the values in the 'locality' column with the mean 'Price' value for each 'locality'
+    df_sell['locality'] = df_sell['locality'].replace(df_grouped)
 
+    # Convert the grouped data to a dictionary
+    output_dict = df_grouped.to_dict()
+
+    # Open a file for writing and write the dictionary to it in JSON format
+    with open("output.json", "w") as f:
+        json.dump(output_dict, f)
+
+    # Return the original data frame with the modified 'locality' column
     return df_sell
+
+    

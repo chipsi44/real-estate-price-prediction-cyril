@@ -1,26 +1,12 @@
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import pickle
 import pandas as pd
-def normalize_scale(df) :
-    # Extract all columns except the second one (Price) and assign it to the variable X, and the second column (Price) is assigned to the variable y.
-    X = df.drop('Price',axis=1)
-    y = df["Price"]
-
-    # Create the StandardScaler object
-    scaler = StandardScaler()
-
-    # Fit the scaler to the feature data
-    scaler.fit(X)
-
-    # Transform the feature data using the scaler
-    X_scaled = scaler.transform(X)
-
-    return X_scaled,y
-
 def training_testing_sets(pandas_data) :
-    X_scaled,y = normalize_scale(pandas_data)
+    X_scaled = pandas_data.drop('Price',axis=1)
+    y = pandas_data["Price"]
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
     return X_train, X_test, y_train, y_test
@@ -29,6 +15,22 @@ def model_training(pandas_data, model = LinearRegression()) :
     X_train, X_test, y_train, y_test = training_testing_sets(pandas_data)
     # fit the model to the training data
     model.fit(X_train, y_train)
+    # Make predictions on the test data
+    y_pred = model.predict(X_test)
+
+    # Calculate the mean absolute error
+    mae = mean_absolute_error(y_test, y_pred)
+
+    # Calculate the mean squared error
+    mse = mean_squared_error(y_test, y_pred)
+
+    # Calculate the R2 score
+    r2 = r2_score(y_test, y_pred)
+
+    # Print the results
+    print("Mean Absolute Error:", mae)
+    print("Mean Squared Error:", mse)
+    print("R2 Score:", r2)
     return model
 
 
@@ -41,3 +43,5 @@ def to_pickle():
     # Export the model to a pickle file
     with open('deployement/model.pickle', 'wb') as file:
         pickle.dump(my_model, file)
+
+to_pickle()
