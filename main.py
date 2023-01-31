@@ -37,7 +37,7 @@ def main() :
     #Get results for different model
     pandas_data = pd.read_csv('data_cleaned.csv')
     #Only keep the house for the prediciton
-    pandas_data = pandas_data[pandas_data['Type_property'] == 2]
+    pandas_data = pandas_data[pandas_data['Type_property'] == 0]
     pandas_data = ZipCode_AveragePrice(pandas_data)
     pandas_data = no_duplicates(pandas_data)
     pandas_data = only_great_line(pandas_data)

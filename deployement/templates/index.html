@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>House price prediction</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
   </head>
   <body>
     <h1>House price prediction</h1>
@@ -9,6 +9,7 @@
       <p>Locality: <input type="text" name="locality"></p>
       <p>Number of Bedrooms: <input type="text" name="Number_bedrooms"></p>
       <p>Living Area: <input type="text" name="Living_area"></p>
+      <p>Type (HOUSE / APARTMENT): <input type="text" name="type"></p>
       <p><input type="submit" value="Submit"></p>
     </form>
     {% if prediction %}

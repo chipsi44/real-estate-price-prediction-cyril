@@ -37,11 +37,17 @@ def model_training(pandas_data, model = LinearRegression()) :
 
 def to_pickle():
     # Your trained model
-    pandas_data = pd.read_csv('load_data.csv')
+    pandas_data = pd.read_csv('deployement/model/load_data_apartement.csv')
     my_model = model_training(pandas_data)
 
     # Export the model to a pickle file
-    with open('deployement/model.pickle', 'wb') as file:
+    with open('deployement/model/model_apartement.pickle', 'wb') as file:
+        pickle.dump(my_model, file)
+    pandas_data = pd.read_csv('deployement/model/load_data_house.csv')
+    my_model = model_training(pandas_data)
+
+    # Export the model to a pickle file
+    with open('deployement/model/model_house.pickle', 'wb') as file:
         pickle.dump(my_model, file)
 
 to_pickle()
