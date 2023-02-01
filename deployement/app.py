@@ -31,7 +31,7 @@ def predict():
         prediction = my_predict(model,locality,Living_area,Number_bedrooms)
         # The prediction is formatted as a string with two decimal places and the thousands separator (,).
         prediction = "{:,.2f} €".format(prediction[0])
-
+        prediction = prediction.replace(',', ' ')
         # The prediction is passed to the template and rendered.
         return render_template("index.html", prediction = prediction)
 
