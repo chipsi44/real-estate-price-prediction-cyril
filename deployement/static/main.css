@@ -1,51 +1,74 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
-
-h1 {
+    background-color: #333;
+    color: #f2f2f2;
+    }
+    
+    h1 {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
     margin-top: 50px;
-}
-
-form {
-    background-color: white;
+    color: #f2f2f2;
+    }
+    
+    form {
+    background-color: #444;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #ccc;
+    box-shadow: 0px 0px 10px #222;
     margin: 0 auto;
     width: 500px;
     text-align: center;
-}
-
-input[type="text"], input[type="number"] {
+    color: #f2f2f2;
+    }
+    
+    input[type="text"], input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     font-size: 18px;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #555;
+    color: #f2f2f2;
+    }
+    
+    input[type="submit"] {
+    background-color: #0062cc;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
     font-size: 18px;
     cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #3e8e41;
-}
-
-.prediction {
+    }
+    
+    input[type="submit"]:hover {
+    background-color: #0052b4;
+    }
+    
+    .prediction {
     margin-top: 50px;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-}
+    color: #f2f2f2;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 99%;
+        background-color: #333;
+        color: white;
+        font-size: 18px;
+      }
+      
+      footer img {
+        height: 50px;
+        margin-right: 125px;
+        margin-bottom: 10px;
+      }
