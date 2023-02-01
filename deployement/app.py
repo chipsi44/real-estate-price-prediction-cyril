@@ -29,7 +29,7 @@ def predict():
             return render_template("index.html", error_message="Invalid input")
 
         prediction = my_predict(model,locality,Living_area,Number_bedrooms)
-        # The prediction is formatted as a string with two decimal places.
+        # The prediction is formatted as a string with two decimal places and the thousands separator (,).
         prediction = "{:,.2f} €".format(prediction[0])
 
         # The prediction is passed to the template and rendered.

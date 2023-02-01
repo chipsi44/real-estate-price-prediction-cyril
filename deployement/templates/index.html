@@ -8,7 +8,7 @@
     <form action="/" method="post">
       <p>Zip Code: <input type="number" name="locality" required></p>
       <p>Number of Bedrooms: <input type="number" name="Number_bedrooms" required></p>
-      <p>Living Area (square meter): <input type="number" name="Living_area" required></p>
+      <p>Living Area (square meters): <input type="number" name="Living_area" required></p>
       <p>Type: 
         <input type="radio" name="type" value="HOUSE" checked> HOUSE 
         <input type="radio" name="type" value="APARTMENT"> APARTMENT
@@ -21,7 +21,7 @@
     
     {% if error_message %}
       <p class = "prediction">Error: {{ error_message }}</p>
-      The property must be situated in a existing locality and feature a maximum of 10 bedrooms.
+      The property must be situated in a existing locality and features a maximum of 10 bedrooms.
     {% endif %}
   </body>
 </html>
