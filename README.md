@@ -161,7 +161,7 @@ docker run -d -p 5000:5000 house-prediction-app
 <table>
   <tr>
     <td>
-        <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/image_and_file/web_site_visual.png" width="800" height="200">
+        <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/image_and_file/web_site_visual.png" width="800" height="400">
     </td>
 </table>
 ## Installation and how to use:
