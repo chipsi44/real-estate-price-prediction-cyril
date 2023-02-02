@@ -69,6 +69,8 @@ In the deployement branch you'll find differents directory :
 - preprocessing  : that will contain all the code that will be used to preprocess the data you will receive to predict a new price.
 - predict : that will contain all the code used to predict a new estate price.
 - model : that will contain the model.
+- static : contain the CSS (not responsive)
+- templates : contain the HTML
 - app.py, used to launch the app
 - Dockerfile, used to create a Docker
 ## State of the project : 
