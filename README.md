@@ -56,12 +56,14 @@ The main file in the project contains a lot of commented parts because it is opt
 
 ### Branch info <br>
 - The main branch will be used as the final branch
-- The data_modeling branch will be used to keep track of the development of the data modeling process. 
+- The image_and_file branch will be used to keep track of the CSV and PNG file created during the project.
 - The deploy_me branch is utilized to manage and monitor the deployment process and its corresponding code. The focus of this branch is solely on the deployment directory. And it's made to work on render.com
 #### main branch
  The main branch, on the other hand, contains the final version of the project that is ready for use or presentation.
-#### data_modeling branch
-In the data_modeling branch, you can find the data sets such as link.csv or immo_data.csv, the cleaned data (data_cleaned.csv), as well as the .png files for the graphs. This branch contains all the intermediate files that were generated during the data modeling process and allows for access to the data at different stages of the project. (Please only look at the CSV file, the code will make you cry. :cry:)<br>
+#### image_and_file
+In this branch you'll find : <br>
+- The differents image of the graph used in the readme
+- The differents CSV created during the project
 #### deploy_me branch
 In the deployement branch you'll find differents directory :
 - preprocessing  : that will contain all the code that will be used to preprocess the data you will receive to predict a new price.
@@ -126,10 +128,10 @@ The data suggests that the presence of a fire place has one of the 5 most signif
 <table>
   <tr>
     <td>
-        <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_1.png" width="400" height="200">
+        <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/image_and_file/Figure_1.png" width="400" height="200">
     </td>
     <td>
-        <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/data_modeling/Figure_2.png" width="400" height="200">
+        <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/image_and_file/Figure_2.png" width="400" height="200">
     </td>
   </tr>
 </table>
