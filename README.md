@@ -167,7 +167,7 @@ Requirements.txt file is available !<br>
 If you want to use the prediction AI here's the link : <br>
 **link** <br>
 if you want to download the docker image here's the link : <br>
-**link**
+**https://hub.docker.com/repository/docker/chipsi44/house-prediction-app/general**
 ## Usage:
 
 The data recolted are not used for any commercial activities. <br>
