@@ -50,19 +50,19 @@ After conducting an extensive model selection process, the linear regression mod
 - Utilize the trained model to make predictions based on the provided zip code, number of bedrooms, living area, and type of property.
 - Develop a dynamic web interface utilizing HTML and CSS, which will enable data input through a user-friendly form and present the output of the prediction .
 - Deploy the app to a Docker container and launch the container to make the website accessible to end-users.
-- Deploy the Docker container on Render.com to make the website accessible and available to the public.
+- Deploy the Docker container on Render.com to make the website accessible and available to the public.For this part I had to create a specific branch ! deploy_me branch
 ### main.py info <br>
 The main file in the project contains a lot of commented parts because it is optimized for speed by saving different information in CSV files. This way, the data does not have to be scrapped, refactored, and cleaned every time a test is run. The main file is also divided into different sections, each of which launches a specific part of the project. This allows for easy navigation and execution of individual parts of the project, rather than having to run the entire project every time. The use of CSV files also allows for the data to be stored and used for future analysis without having to re-scrap and clean the data again.
 
 ### Branch info <br>
 - The main branch will be used as the final branch
 - The data_modeling branch will be used to keep track of the development of the data modeling process. 
-- The deployment branch is utilized to manage and monitor the deployment process and its corresponding code. The focus of this branch is solely on the deployment directory.
+- The deploy_me branch is utilized to manage and monitor the deployment process and its corresponding code. The focus of this branch is solely on the deployment directory. And it's made to work on render.com
 #### main branch
  The main branch, on the other hand, contains the final version of the project that is ready for use or presentation.
 #### data_modeling branch
 In the data_modeling branch, you can find the data sets such as link.csv or immo_data.csv, the cleaned data (data_cleaned.csv), as well as the .png files for the graphs. This branch contains all the intermediate files that were generated during the data modeling process and allows for access to the data at different stages of the project. (Please only look at the CSV file, the code will make you cry. :cry:)<br>
-#### deployment branch
+#### deploy_me branch
 In the deployement branch you'll find differents directory :
 - preprocessing  : that will contain all the code that will be used to preprocess the data you will receive to predict a new price.
 - predict : that will contain all the code used to predict a new estate price.
@@ -150,14 +150,18 @@ The data suggests that the presence of a fire place has one of the 5 most signif
 In order to ensure high performance, models will be selected based on their test score exceeding a threshold of 0.50.
 
 ### Docker line
+*Those are the line I used to create my docker image and run my docker*
 docker build -t house-prediction-app . <br>
 docker run -d -p 5000:5000 house-prediction-app
+### Web Site results : 
+
 ## Installation and how to use:
 
 pip install -r requirements.txt <br>
 Requirements.txt file is available !<br>
 
-To utilize the project, execute the main.py script located in the main branch. For faster execution, consider commenting out sections of the main code that pertain to loading CSV files, in the event that they have already been obtained. The code is well-documented, making it easy to identify the specific sections to comment.
+If you want to use the prediction AI here's the link : <br>
+**link**
 ## Usage:
 
 The data recolted are not used for any commercial activities. <br>
