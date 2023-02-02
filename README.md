@@ -165,6 +165,7 @@ docker run -d -p 5000:5000 house-prediction-app
         <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/image_and_file/web_site_visual.png" width="800" height="400">
     </td>
 </table>
+
 | Zip Code | Number bedrooms | Living Area |
 |-------|------------|---------------------|
 | Number (int) | Number (int) | Number (float) |
