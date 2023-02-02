@@ -157,13 +157,14 @@ In order to ensure high performance, models will be selected based on their test
 *Those are the line I used to create my docker image and run my docker*
 docker build -t house-prediction-app . <br>
 docker run -d -p 5000:5000 house-prediction-app
-### Web Site results : 
+### Web Site visual : 
 <table>
   <tr>
     <td>
         <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/image_and_file/web_site_visual.png" width="800" height="400">
     </td>
 </table>
+
 ## Installation and how to use:
 
 pip install -r requirements.txt <br>
