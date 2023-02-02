@@ -171,7 +171,7 @@ pip install -r requirements.txt <br>
 Requirements.txt file is available !<br>
 
 If you want to use the prediction AI here's the link : <br>
-**link** <br>
+**https://price-prediction-app-8owy.onrender.com** <br>
 if you want to download the docker image here's the link : <br>
 **https://hub.docker.com/repository/docker/chipsi44/house-prediction-app/general**
 ## Usage:
