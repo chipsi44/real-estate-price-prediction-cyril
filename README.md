@@ -10,7 +10,7 @@ It's going to be in 4 steps :
 2. **Data Analysis**: Once the data is collected, the next step is to analyze it. This includes cleaning and preprocessing the data, as well as exploring and visualizing it to gain insights and understanding of the dataset. This step is important in order to identify patterns, trends, and outliers in the data, and to determine which features are important for the model.
 
 3. **Data Modeling**: After the data has been cleaned, preprocessed and explored, the next step is to build a machine learning model. This step involves selecting an appropriate algorithm, training the model on the dataset, and evaluating its performance. The goal is to find the best model that can accurately predict real estate prices. This step may involve multiple iterations of selecting and tuning the model, evaluating different features, and adjusting the parameters. Once a satisfactory model is found, it can be saved and exported for deployment.
-4. **Deployement**: The deployment process involves integrating a trained machine learning model into a production environment, making it accessible and operational for end-users. This project specifically involves hosting the model on a web page through the use of Docker technology.
+4. **Deployement**: The deployment process involves integrating a trained machine learning model into a production environment, making it accessible and operational for end-users. This project specifically involves hosting the model on a web page through the use of Docker technology and render.com.
 
 #### Scrapping part <br>
 
@@ -69,6 +69,8 @@ In the deployement branch you'll find differents directory :
 - preprocessing  : that will contain all the code that will be used to preprocess the data you will receive to predict a new price.
 - predict : that will contain all the code used to predict a new estate price.
 - model : that will contain the model.
+- app.py, used to launch the app
+- Dockerfile, used to create a Docker
 ## State of the project : 
 - [x] Scrapping
 - [x] Data analysis
@@ -163,6 +165,8 @@ pip install -r requirements.txt <br>
 Requirements.txt file is available !<br>
 
 If you want to use the prediction AI here's the link : <br>
+**link** <br>
+if you want to download the docker image here's the link : <br>
 **link**
 ## Usage:
 
