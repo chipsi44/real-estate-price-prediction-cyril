@@ -154,7 +154,8 @@ The data suggests that the presence of a fire place has one of the 5 most signif
 In order to ensure high performance, models will be selected based on their test score exceeding a threshold of 0.50.
 
 ### Docker line
-> Those are the line I used to create my docker image and run my docker
+> Those are the line I used to create my docker image and run my docker <br>
+
 docker build -t house-prediction-app . <br>
 docker run -d -p 5000:5000 house-prediction-app
 ### Web Site visual : 
