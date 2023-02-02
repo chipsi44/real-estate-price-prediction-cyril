@@ -158,13 +158,16 @@ In order to ensure high performance, models will be selected based on their test
 
 docker build -t house-prediction-app . <br>
 docker run -d -p 5000:5000 house-prediction-app
-### Web Site visual : 
+### Web Site visual and data : 
 <table>
   <tr>
     <td>
         <img src="https://github.com/chipsi44/real-estate-price-prediction-cyril/blob/image_and_file/web_site_visual.png" width="800" height="400">
     </td>
 </table>
+| Zip Code | Number bedrooms | Living Area |
+|-------|------------|---------------------|
+| Number (int) | Number (int) | Number (float) |
 
 ## Installation and how to use:
 
