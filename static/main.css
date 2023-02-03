@@ -80,7 +80,18 @@ form {
 }
 }
 
-a, a:visited {
-  color: white;
+a:link {
+  color: #bbb;
 }
 
+a:visited {
+  color: #999;
+}
+
+a:hover {
+  color: #fff;
+}
+
+a:active {
+  color: #ddd;
+}
